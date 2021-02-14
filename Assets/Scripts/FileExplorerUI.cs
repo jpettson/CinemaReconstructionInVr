@@ -26,10 +26,10 @@ public class FileExplorerUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-     
-        Path.GetFullPath(Path.GetDirectoryName(Application.dataPath));
+
+        Debug.Log(Application.dataPath);
         //Append the '@' verbatim to the directory path string  
-        this.directoryPath = @"" + this.directoryPath;
+        this.directoryPath = @"" + Application.dataPath;//this.directoryPath;
 
         try
         {
