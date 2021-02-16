@@ -19106,6 +19106,7 @@ GameObject:
   - component: {fileID: 1503263450}
   - component: {fileID: 1503263449}
   - component: {fileID: 1503263448}
+  - component: {fileID: 1503263453}
   m_Layer: 0
   m_Name: Screen
   m_TagString: Untagged
@@ -19404,6 +19405,19 @@ Transform:
   m_Father: {fileID: 1693431122}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1503263453
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503263447}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 22, y: 13, z: 1}
+  m_Center: {x: 11, y: 6.5, z: -0.5}
 --- !u!43 &1515797365
 Mesh:
   m_ObjectHideFlags: 0
@@ -25271,6 +25285,7 @@ GameObject:
   - component: {fileID: 2053082472}
   - component: {fileID: 2053082471}
   - component: {fileID: 2053082470}
+  - component: {fileID: 2053082475}
   m_Layer: 0
   m_Name: CinemaRoom
   m_TagString: Untagged
@@ -32361,6 +32376,19 @@ Transform:
   m_Father: {fileID: 1693431122}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2053082475
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2053082469}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 36, y: 17, z: 60}
+  m_Center: {x: 18, y: 8.5, z: -30}
 --- !u!1001 &2080727814
 PrefabInstance:
   m_ObjectHideFlags: 0
