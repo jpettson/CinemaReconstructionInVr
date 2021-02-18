@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7058152090021369061}
   - component: {fileID: 7058152090021369082}
-  - component: {fileID: 7058152090021369080}
   m_Layer: 0
   m_Name: VideoPlayer
   m_TagString: Untagged
@@ -48,7 +47,7 @@ VideoPlayer:
   m_TimeReference: 0
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: _MainTex
-  m_RenderMode: 2
+  m_RenderMode: 3
   m_AspectRatio: 2
   m_DataSource: 0
   m_PlaybackSpeed: 1
@@ -66,19 +65,3 @@ VideoPlayer:
   m_Looping: 0
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
---- !u!114 &7058152090021369080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7058152090021369081}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneId: 0
-  serverOnly: 0
-  m_AssetId: 
-  hasSpawned: 0
