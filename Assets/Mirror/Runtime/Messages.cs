@@ -14,25 +14,11 @@ namespace Mirror
     public interface NetworkMessage { }
 
     #region Public System Messages
-    public struct ErrorMessage : NetworkMessage
-    {
-        public byte value;
-
-        public ErrorMessage(byte v)
-        {
-            value = v;
-        }
-    }
-
     public struct ReadyMessage : NetworkMessage { }
 
     public struct NotReadyMessage : NetworkMessage { }
 
     public struct AddPlayerMessage : NetworkMessage { }
-
-    public struct DisconnectMessage : NetworkMessage { }
-
-    public struct ConnectMessage : NetworkMessage { }
 
     public struct SceneMessage : NetworkMessage
     {
@@ -51,7 +37,7 @@ namespace Mirror
 
     #endregion
 
-    #region System Messages requried for code gen path
+    #region System Messages required for code gen path
     public struct CommandMessage : NetworkMessage
     {
         public uint netId;
