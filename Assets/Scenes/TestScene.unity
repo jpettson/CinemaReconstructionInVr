@@ -345,9 +345,7 @@ MonoBehaviour:
   spawnPrefabs:
   - {fileID: 2561268647314391065, guid: 06cec0f718115284d9135b852769edf7, type: 3}
   startLocation: {fileID: 1296433899}
-  videoScreenPrefab: {fileID: 2561268647314391065, guid: 06cec0f718115284d9135b852769edf7,
-    type: 3}
-  videoScreenObject: {fileID: 1214780365}
+  videoPlayerLocation: {fileID: 1214780366}
 --- !u!4 &1330710277
 Transform:
   m_ObjectHideFlags: 0

@@ -9,20 +9,13 @@ public class NetworkManagerVideo : NetworkManager
     [SerializeField]
     public Transform startLocation;
     [SerializeField]
-    public GameObject videoScreenPrefab;
-    [SerializeField]
-    public GameObject videoScreenObject;
+    public Transform videoPlayerLocation;
 
-    public static string videoName = "";
-    public static bool isVideoPlaying = false;
-    public static long currentFrame;
-
-    private int x = 0;
 
     public override void OnServerAddPlayer(NetworkConnection conn)
     {
         GameObject player = Instantiate(playerPrefab, startLocation.position, startLocation.rotation);
-        GameObject videoPlayer = Instantiate(videoScreenPrefab, videoScreenObject.transform);
+        GameObject videoPlayer = Instantiate(this.spawnPrefabs[0], videoPlayerLocation.position, videoPlayerLocation.rotation);
         NetworkIdentity playerId = player.GetComponent<NetworkIdentity>();
 
         
@@ -31,5 +24,8 @@ public class NetworkManagerVideo : NetworkManager
         playerId.AssignClientAuthority(conn);
 
         NetworkServer.Spawn(videoPlayer, player);
+
+        Debug.Log(playerId.netId);
+        Debug.Log(videoPlayer.GetComponent<NetworkIdentity>().netId);
     }
 }
