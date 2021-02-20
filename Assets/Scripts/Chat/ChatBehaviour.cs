@@ -15,6 +15,7 @@ namespace DapperDino.Mirror.Tutorials.Chat
 
         public override void OnStartAuthority()
         {
+            
             chatUI.SetActive(true);
 
             OnMessage += HandleNewMessage;
@@ -23,8 +24,10 @@ namespace DapperDino.Mirror.Tutorials.Chat
         [ClientCallback]
         private void OnDestroy()
         {
+            Debug.Log("destoryed");
+            if (!Input.GetKeyDown(KeyCode.Return)) { inputField.ActivateInputField(); }
             if (!hasAuthority) { return; }
-
+            
             OnMessage -= HandleNewMessage;
         }
 
@@ -32,15 +35,26 @@ namespace DapperDino.Mirror.Tutorials.Chat
         {
             chatText.text += message;
         }
+        [Client]
+        public void Update()
+        {
+            Debug.Log(inputField.isFocused);
+            if (!inputField.isFocused)
+            {
+                Debug.Log("selected biiiitch");
+                inputField.Select();
+            }
+        }
 
         [Client]
         public void Send(string message)
         {
+            
             if (!Input.GetKeyDown(KeyCode.Return)) { return; }
 
-            if (string.IsNullOrWhiteSpace(message)) { return; }
+            if (string.IsNullOrWhiteSpace(inputField.text)) { return; }
 
-            CmdSendMessage(message);
+            CmdSendMessage(inputField.text);
 
             inputField.text = string.Empty;
         }
