@@ -12,7 +12,8 @@ public class ChatNetworkBehaviour: NetworkManager
 
     public override void OnServerAddPlayer(NetworkConnection conn)
     {
-        GameObject player = Instantiate(playerPrefab, startLocation.position, startLocation.rotation);
+       /* GameObject player = Instantiate(playerPrefab, startLocation.position, startLocation.rotation);
+        
         NetworkIdentity playerId = player.GetComponent<NetworkIdentity>();
 
 
@@ -20,6 +21,6 @@ public class ChatNetworkBehaviour: NetworkManager
         NetworkServer.AddPlayerForConnection(conn, player);
         playerId.AssignClientAuthority(conn);
         Debug.Log(playerId.netId);
-
+       */
     }
 }

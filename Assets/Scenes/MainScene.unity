@@ -130,7 +130,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 335889650}
-  - component: {fileID: 335889651}
   - component: {fileID: 335889649}
   - component: {fileID: 335889648}
   - component: {fileID: 335889647}
@@ -187,7 +186,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 335889646}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abf6d304d983ba640b2496f2981ce3e1, type: 3}
+  m_Script: {fileID: 11500000, guid: 8aab4c8111b7c411b9b92cf3dbc5bd4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dontDestroyOnLoad: 1
@@ -210,7 +209,6 @@ MonoBehaviour:
   autoCreatePlayer: 1
   playerSpawnMethod: 0
   spawnPrefabs: []
-  startLocation: {fileID: 1575841128}
 --- !u!4 &335889650
 Transform:
   m_ObjectHideFlags: 0
@@ -225,22 +223,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &335889651
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 335889646}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneId: 599641436
-  serverOnly: 0
-  m_AssetId: 
-  hasSpawned: 0
 --- !u!1001 &567536996
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -302,6 +284,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6662823806489092915, guid: 52d18c2b52acc7444912fcf9a7f5401a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: -6662823806489092915, guid: 52d18c2b52acc7444912fcf9a7f5401a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6662823806489092915, guid: 52d18c2b52acc7444912fcf9a7f5401a,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: -6662823806489092915, guid: 52d18c2b52acc7444912fcf9a7f5401a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2364
+      objectReference: {fileID: 0}
+    - target: {fileID: -6662823806489092915, guid: 52d18c2b52acc7444912fcf9a7f5401a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1843
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 52d18c2b52acc7444912fcf9a7f5401a,
         type: 3}
