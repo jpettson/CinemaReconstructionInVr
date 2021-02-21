@@ -284,7 +284,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2839,7 +2839,6 @@ GameObject:
   - component: {fileID: 7651134016920198304}
   - component: {fileID: 7651134016920198319}
   - component: {fileID: 7651134016920198318}
-  - component: {fileID: 7651134016920198305}
   m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2912,20 +2911,6 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7651134016920198307}
   m_Enabled: 1
---- !u!114 &7651134016920198305
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7651134016920198307}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea1b39e5be7277a44af3325ffa48024c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mouseSensitivity: 60
-  playerBody: {fileID: 7651134017597909841}
 --- !u!1 &7651134016925301805
 GameObject:
   m_ObjectHideFlags: 0
@@ -3997,7 +3982,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7651134017597909841}
-  - component: {fileID: 7651134017597909840}
   - component: {fileID: 7651134017597909843}
   - component: {fileID: 7067737096862281434}
   - component: {fileID: 8223431438281222115}
@@ -4036,26 +4020,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &7651134017597909840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7651134017597909842}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8af45bb9e6334214b947dd087881cd83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 7651134017597909843}
-  speed: 12
-  gravity: -9.81
-  groundCheck: {fileID: 7651134015699691961}
-  groundDistance: 0.4
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 512
 --- !u!143 &7651134017597909843
 CharacterController:
   m_ObjectHideFlags: 0
@@ -4424,7 +4388,7 @@ Canvas:
   m_GameObject: {fileID: 9021154076989779994}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 7651134016920198319}
   m_PlaneDistance: 0.1
   m_PixelPerfect: 0

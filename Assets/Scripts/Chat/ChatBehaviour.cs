@@ -3,8 +3,7 @@ using System;
 using TMPro;
 using UnityEngine;
 
-namespace DapperDino.Mirror.Tutorials.Chat
-{
+
     public class ChatBehaviour : NetworkBehaviour
     {
         [SerializeField] private GameObject chatUI = null;
@@ -35,17 +34,16 @@ namespace DapperDino.Mirror.Tutorials.Chat
         {
             chatText.text += message;
         }
+    /*
         [Client]
         public void Update()
         {
-            Debug.Log(inputField.isFocused);
             if (!inputField.isFocused)
             {
-                Debug.Log("selected biiiitch");
                 inputField.Select();
             }
         }
-
+    */
         [Client]
         public void Send(string message)
         {
@@ -71,4 +69,3 @@ namespace DapperDino.Mirror.Tutorials.Chat
             OnMessage?.Invoke($"\n{message}");
         }
     }
-}
