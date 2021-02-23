@@ -4,9 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
 using TMPro;
+using Mirror;
 
 
-public class MovieListItem : MonoBehaviour
+public class MovieListItem : NetworkBehaviour
 {
     // Start is called before the first frame update
     public string filePath;
@@ -17,6 +18,8 @@ public class MovieListItem : MonoBehaviour
     void Start()
     {
         btn = GetComponentInChildren<Button>();
+
+        //Might have to replace with something else for VR;
         btn.onClick.AddListener(TaskOnClick);
 
 
@@ -38,7 +41,21 @@ public class MovieListItem : MonoBehaviour
     //Video player in the scene requires the tag "VideoPlayer".
     void TaskOnClick()
     {
+        CmdLoadVideo(filePath);
+    }
+
+    [Command]
+    void CmdLoadVideo(string filePath)
+    {
+        RpcLoadVideo(filePath);
+    }
+
+    [ClientRpc]
+    void RpcLoadVideo(string filePath)
+    {
         GameObject g = GameObject.FindGameObjectWithTag("VideoPlayer");
         g.GetComponent<Video>().path = filePath;
     }
+
+    
 }
