@@ -57,6 +57,25 @@ namespace Mirror
         /// </summary>
         public static bool active { get; internal set; }
 
+
+        /// <summary>
+        /// batching is still optional until we improve mirror's update order.
+        /// right now it increases latency because:
+        ///   enabling batching flushes all state updates in same frame, but
+        ///   transport processes incoming messages afterwards so server would
+        ///   batch them until next frame's flush
+        /// => disable it for super fast paced games
+        /// => enable it for high scale / cpu heavy games
+        /// </summary>
+        public static bool batching;
+
+        /// <summary>
+        /// batching from server to client.
+        /// fewer transport calls give us significantly better performance/scale.
+        /// if batch interval is 0, then we only batch until the Update() call.
+        /// </summary>
+        public static float batchInterval = 0;
+
         /// <summary>
         /// Should the server disconnect remote connections that have gone silent for more than Server Idle Timeout?
         /// <para>This value is initially set from NetworkManager in SetupServer and can be changed at runtime</para>
@@ -71,6 +90,13 @@ namespace Mirror
         /// <para>Default value is 60 seconds.</para>
         /// </summary>
         public static float disconnectInactiveTimeout = 60f;
+
+        // OnConnected / OnDisconnected used to be NetworkMessages that were
+        // invoked. this introduced a bug where external clients could send
+        // Connected/Disconnected messages over the network causing undefined
+        // behaviour.
+        internal static Action<NetworkConnection> OnConnectedEvent;
+        internal static Action<NetworkConnection> OnDisconnectedEvent;
 
         /// <summary>
         /// This shuts down the server and disconnects all clients.
@@ -194,7 +220,7 @@ namespace Mirror
         }
 
         /// <summary>
-        /// called by LocalClient to add itself. dont call directly.
+        /// called by LocalClient to add itself. don't call directly.
         /// </summary>
         /// <param name="conn"></param>
         internal static void SetLocalConnection(ULocalConnectionToClient conn)
@@ -447,7 +473,7 @@ namespace Mirror
         /// </summary>
         public static void Update()
         {
-            // dont need to update server if not active
+            // don't need to update server if not active
             if (!active)
                 return;
 
@@ -469,6 +495,12 @@ namespace Mirror
                     // always call Remove in OnObjectDestroy everywhere.
                     logger.LogWarning("Found 'null' entry in spawned list for netId=" + kvp.Key + ". Please call NetworkServer.Destroy to destroy networked objects. Don't use GameObject.Destroy.");
                 }
+            }
+
+            // update all connections to send out batched messages in interval
+            foreach (NetworkConnectionToClient conn in connections.Values)
+            {
+                conn.Update();
             }
         }
 
@@ -499,10 +531,12 @@ namespace Mirror
         {
             if (logger.LogEnabled()) logger.Log("Server accepted client:" + connectionId);
 
-            // connectionId needs to be > 0 because 0 is reserved for local player
-            if (connectionId <= 0)
+            // connectionId needs to be != 0 because 0 is reserved for local player
+            // note that some transports like kcp generate connectionId by
+            // hashing which can be < 0 as well, so we need to allow < 0!
+            if (connectionId == 0)
             {
-                logger.LogError("Server.HandleConnect: invalid connectionId: " + connectionId + " . Needs to be >0, because 0 is reserved for local player.");
+                logger.LogError("Server.HandleConnect: invalid connectionId: " + connectionId + " . Needs to be != 0, because 0 is reserved for local player.");
                 Transport.activeTransport.ServerDisconnect(connectionId);
                 return;
             }
@@ -523,7 +557,7 @@ namespace Mirror
             if (connections.Count < maxConnections)
             {
                 // add connection
-                NetworkConnectionToClient conn = new NetworkConnectionToClient(connectionId);
+                NetworkConnectionToClient conn = new NetworkConnectionToClient(connectionId, batching, batchInterval);
                 OnConnected(conn);
             }
             else
@@ -540,7 +574,7 @@ namespace Mirror
 
             // add connection and invoke connected event
             AddConnection(conn);
-            conn.InvokeHandler(new ConnectMessage(), -1);
+            OnConnectedEvent?.Invoke(conn);
         }
 
         internal static void OnDisconnected(int connectionId)
@@ -559,7 +593,7 @@ namespace Mirror
 
         static void OnDisconnected(NetworkConnection conn)
         {
-            conn.InvokeHandler(new DisconnectMessage(), -1);
+            OnDisconnectedEvent?.Invoke(conn);
             if (logger.LogEnabled()) logger.Log("Server lost client:" + conn);
         }
 
@@ -715,7 +749,7 @@ namespace Mirror
         /// <param name="conn">Connection which is adding the player.</param>
         /// <param name="player">Player object spawned for the player.</param>
         /// <param name="assetId"></param>
-        /// <returns>True if connection was sucessfully added for a connection.</returns>
+        /// <returns>True if connection was successfully added for a connection.</returns>
         public static bool AddPlayerForConnection(NetworkConnection conn, GameObject player, Guid assetId)
         {
             if (GetNetworkIdentity(player, out NetworkIdentity identity))
@@ -1173,13 +1207,13 @@ namespace Mirror
         static bool CheckForPrefab(GameObject obj)
         {
 #if UNITY_EDITOR
-#if UNITY_2018_3_OR_NEWER
+    #if UNITY_2018_3_OR_NEWER
             return UnityEditor.PrefabUtility.IsPartOfPrefabAsset(obj);
-#elif UNITY_2018_2_OR_NEWER
+    #elif UNITY_2018_2_OR_NEWER
             return (UnityEditor.PrefabUtility.GetCorrespondingObjectFromSource(obj) == null) && (UnityEditor.PrefabUtility.GetPrefabObject(obj) != null);
-#else
+    #else
             return (UnityEditor.PrefabUtility.GetPrefabParent(obj) == null) && (UnityEditor.PrefabUtility.GetPrefabObject(obj) != null);
-#endif
+    #endif
 #else
             return false;
 #endif
@@ -1217,7 +1251,7 @@ namespace Mirror
 
             identity.OnStopServer();
 
-            // when unspawning, dont destroy the server's object
+            // when unspawning, don't destroy the server's object
             if (destroyServerObject)
             {
                 identity.destroyCalled = true;
