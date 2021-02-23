@@ -4,10 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEditor;
 using UnityEngine.Video;
-
+using Mirror;
 using System;
 
-public class Video : MonoBehaviour{
+public class Video : NetworkBehaviour{
 
 public string path;
 private VideoPlayer videoPlayer;
@@ -31,15 +31,18 @@ public void Start()
              videoPlayer.Play();
          }
      }
+      
 
-     if (Input.GetKeyDown(KeyCode.RightArrow)) {
-         videoPlayer.frame += 100;
-         videoPlayer.Play();
-     } else if (Input.GetKeyDown(KeyCode.LeftArrow)) {
-         videoPlayer.frame -= 100;
-         videoPlayer.Play();
-     }
-
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            videoPlayer.frame += 100;
+            videoPlayer.Play();
+        }
+        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            videoPlayer.frame -= 100;
+            videoPlayer.Play();
+        }
  }
 
 IEnumerator playVideo()
