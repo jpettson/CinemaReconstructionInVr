@@ -7,7 +7,7 @@ using TMPro;
 using Mirror;
 
 
-public class MovieListItem : MonoBehaviour
+public class MovieListItem : NetworkBehaviour
 {
     // Start is called before the first frame update
     public string filePath;
