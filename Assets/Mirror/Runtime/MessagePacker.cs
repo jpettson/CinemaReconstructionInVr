@@ -97,7 +97,7 @@ namespace Mirror
 
                 if (logger.LogEnabled()) logger.Log($"ConnectionRecv {conn} msgType:{typeof(T)} content:{BitConverter.ToString(reader.buffer.Array, reader.buffer.Offset, reader.buffer.Count)}");
 
-                // if it is a value type, just use defult(T)
+                // if it is a value type, just use default(T)
                 // otherwise allocate a new instance
                 message = reader.Read<T>();
             }
@@ -121,7 +121,7 @@ namespace Mirror
             }
             catch (Exception e)
             {
-                logger.LogError($"Exception in MessageHandler: {e.GetType().Name} {e.Message} {e.StackTrace}");
+                logger.LogError($"Exception in MessageHandler: {e.GetType().Name} {e.Message}\n{e.StackTrace}");
                 conn.Disconnect();
             }
         };
