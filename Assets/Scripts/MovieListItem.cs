@@ -17,10 +17,10 @@ public class MovieListItem : NetworkBehaviour
 
     void Start()
     {
-        btn = GetComponentInChildren<Button>();
+        //btn = GetComponentInChildren<Button>();
 
         //Might have to replace with something else for VR;
-        btn.onClick.AddListener(TaskOnClick);
+       // btn.onClick.AddListener(TaskOnClick);
 
 
         Rect rT;

@@ -187,7 +187,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  filePath: 
 --- !u!222 &831535032578378168
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -207,8 +206,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 390.29404, y: 80.58487, z: 15.999681}
-  m_Center: {x: 6.0573883, y: -1.6526031, z: -2.6612558}
+  m_Size: {x: 369.3801, y: 72.10713, z: 0.0149888545}
+  m_Center: {x: 0.82901126, y: 1.280101, z: -0.0013440902}
 --- !u!1 &3710401822499939946
 GameObject:
   m_ObjectHideFlags: 0

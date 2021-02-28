@@ -43,9 +43,13 @@ public class MouseLook : MonoBehaviour
         RaycastHit hit;
 
         // if raycast hits, it checks if it hit an object with the tag Player
-        if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y-0.05f, transform.position.z), transform.forward, out hit, maxDistance) &&
+        if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y - 0.02f, transform.position.z), transform.forward, out hit, maxDistance) &&
             (hit.collider.gameObject.CompareTag("MovieListItem")))
         {
+
+            Debug.DrawRay(new Vector3(transform.position.x, transform.position.y- 0.02f, transform.position.z), transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+
+
             if (currentHighlightedObject)
             {
                 if(currentHighlightedObject != hit.collider.gameObject)
@@ -60,8 +64,12 @@ public class MouseLook : MonoBehaviour
 
         } else
         {
-            currentHighlightedObject.GetComponent<MovieListItem>().DeHighLight();
-            currentHighlightedObject = null;
+            if (currentHighlightedObject)
+            {
+                currentHighlightedObject.GetComponent<MovieListItem>().DeHighLight();
+                currentHighlightedObject = null;
+            }
+            
         }
     }
 
