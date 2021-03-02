@@ -12,6 +12,7 @@ public class MovieController : MonoBehaviour
         if (other.tag == "Player")
         {
             movieMenU.SetActive(true);
+            movieMenU.GetComponent<Billboard>().cam = other.gameObject.GetComponentInChildren<Camera>().transform;
         }
     }
 

@@ -68,8 +68,11 @@ public class VideoController : NetworkBehaviour
             
         } else if (isLocalPlayer && Input.GetKeyDown(KeyCode.G))
         {
-            
-            CmdLoadVideo("C:\\Users\\adam_\\Downloads\\yt1s.com - Rick Astley  Never Gonna Give You Up Video_360p.mp4");
+            if (gameObject.GetComponentInChildren<MouseLook>().currentHighlightedObject)
+            {
+                CmdLoadVideo(gameObject.GetComponentInChildren<MouseLook>().currentHighlightedObject.GetComponent<MovieListItem>().GetFilePath());
+
+            }
         }
         if (videoPlayer.isPlaying)
         {

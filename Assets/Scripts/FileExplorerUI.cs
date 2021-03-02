@@ -29,7 +29,7 @@ public class FileExplorerUI : MonoBehaviour
 
         Debug.Log(Application.dataPath);
         //Append the '@' verbatim to the directory path string  
-        this.directoryPath = @"" + Application.dataPath;//this.directoryPath;
+        this.directoryPath = @"" + this.directoryPath;//Application.dataPath;
 
         try
         {
