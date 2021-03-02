@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - VideoPlayer
+  - MovieListItem
   layers:
   - Default
   - TransparentFX

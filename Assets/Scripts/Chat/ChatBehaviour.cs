@@ -24,7 +24,10 @@ using UnityEngine;
         private void OnDestroy()
         {
             Debug.Log("destoryed");
-            if (!Input.GetKeyDown(KeyCode.Return)) { inputField.ActivateInputField(); }
+        if (!(Input.GetKey(KeyCode.KeypadEnter) || Input.GetKey("enter"))){
+            if (!inputField.isActiveAndEnabled) { inputField.ActivateInputField(); }
+            inputField.Select();
+        }
             if (!hasAuthority) { return; }
             
             OnMessage -= HandleNewMessage;
@@ -38,13 +41,14 @@ using UnityEngine;
         [Client]
         public void Update()
         {
-            if (!inputField.isFocused)
+            if (!inputField.isActiveAndEnabled) 
             {
                 inputField.Select();
             }
         }
+    
     */
-        [Client]
+    [Client]
         public void Send(string message)
         {
             
