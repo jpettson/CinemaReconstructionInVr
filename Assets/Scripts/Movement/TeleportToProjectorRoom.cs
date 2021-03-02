@@ -14,6 +14,7 @@ public class TeleportToProjectorRoom : MonoBehaviour
     public void OnMouseDown() {
 
         if(entranceDoor.GetComponent<MeshRenderer>().enabled)
+        Debug.Log("open door");
         player.transform.position = projectorRoomLocation.transform.position;
     }
 }
