@@ -10,17 +10,17 @@ using Mirror;
 public class MovieListItem : NetworkBehaviour
 {
     // Start is called before the first frame update
-    public string filePath;
+    private string filePath;
 
     private TextMeshProUGUI titleBox;
     private Button btn;
 
     void Start()
     {
-        btn = GetComponentInChildren<Button>();
+        //btn = GetComponentInChildren<Button>();
 
         //Might have to replace with something else for VR;
-        btn.onClick.AddListener(TaskOnClick);
+       // btn.onClick.AddListener(TaskOnClick);
 
 
         Rect rT;
@@ -37,25 +37,29 @@ public class MovieListItem : NetworkBehaviour
     } 
 
 
-
-    //Video player in the scene requires the tag "VideoPlayer".
     void TaskOnClick()
     {
-        CmdLoadVideo(filePath);
+        GameObject.FindGameObjectWithTag("Player").GetComponent<VideoController>().CmdLoadVideo(filePath);
     }
 
-    [Command]
-    void CmdLoadVideo(string filePath)
+
+    public void HighLight()
     {
-        RpcLoadVideo(filePath);
+        transform.GetChild(1).gameObject.SetActive(true);
     }
 
-    [ClientRpc]
-    void RpcLoadVideo(string filePath)
+    public void DeHighLight()
     {
-        GameObject g = GameObject.FindGameObjectWithTag("VideoPlayer");
-        g.GetComponent<Video>().path = filePath;
+        transform.GetChild(1).gameObject.SetActive(false);
     }
 
-    
+
+
+    public string GetFilePath()
+    {
+        return filePath;
+    }
+
+
+
 }
