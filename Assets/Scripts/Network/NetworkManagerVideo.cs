@@ -21,9 +21,7 @@ public class NetworkManagerVideo : NetworkManager
 
         
 
-        GameObject teleportation = Instantiate(spawnPrefabs[2], startLocation.position, startLocation.rotation);
-        GameObject teleportationPoints = Instantiate(spawnPrefabs[1], new Vector3(-57.76089f, 1.291264f, -25.77712f), Quaternion.identity);
-        
+       
         GameObject player = Instantiate(playerPrefab, startLocation.position, startLocation.rotation);
         GameObject videoPlayer = Instantiate(this.spawnPrefabs[0], videoPlayerLocation.position, videoPlayerLocation.rotation);
         NetworkIdentity playerId = player.GetComponent<NetworkIdentity>();
@@ -33,8 +31,6 @@ public class NetworkManagerVideo : NetworkManager
         NetworkServer.AddPlayerForConnection(conn, player);
         playerId.AssignClientAuthority(conn);
 
-        NetworkServer.Spawn(teleportation, player);
-        NetworkServer.Spawn(teleportationPoints, player);
         NetworkServer.Spawn(videoPlayer, player);
 
         Debug.Log(playerId.netId);
