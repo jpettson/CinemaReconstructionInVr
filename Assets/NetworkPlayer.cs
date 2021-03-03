@@ -33,7 +33,7 @@ public class NetworkPlayer : NetworkBehaviour
             rightHand.gameObject.SetActive(false);
 
 
-            MapPosition(head, p.gameObject.transform);
+            MapPosition(head, p.hmdTransform);
             if (p.hands[0].handType == Valve.VR.SteamVR_Input_Sources.LeftHand)
             {
                 MapPosition(leftHand, p.hands[0].gameObject.transform);
