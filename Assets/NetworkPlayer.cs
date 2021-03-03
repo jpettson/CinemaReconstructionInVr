@@ -17,7 +17,7 @@ public class NetworkPlayer : NetworkBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        p = Player.instance;
+        
     }
 
     // Update is called once per frame
@@ -26,28 +26,30 @@ public class NetworkPlayer : NetworkBehaviour
 
         if (isLocalPlayer)
         {
+
+            p = Player.instance;
             head.gameObject.SetActive(false);
             leftHand.gameObject.SetActive(false);
             rightHand.gameObject.SetActive(false);
 
 
-            MapPosition(head, p.hmdTransform);
+            MapPosition(head, p.gameObject.transform);
             if (p.hands[0].handType == Valve.VR.SteamVR_Input_Sources.LeftHand)
             {
-                MapPosition(leftHand, p.hands[0].transform);
+                MapPosition(leftHand, p.hands[0].gameObject.transform);
             }
             else if (p.hands[0].handType == Valve.VR.SteamVR_Input_Sources.RightHand)
             {
-                MapPosition(rightHand, p.hands[0].transform);
+                MapPosition(rightHand, p.hands[0].gameObject.transform);
             }
 
             if (p.hands[1].handType == Valve.VR.SteamVR_Input_Sources.LeftHand)
             {
-                MapPosition(leftHand, p.hands[1].transform);
+                MapPosition(leftHand, p.hands[1].gameObject.transform);
             }
             else if (p.hands[1].handType == Valve.VR.SteamVR_Input_Sources.RightHand)
             {
-                MapPosition(rightHand, p.hands[1].transform);
+                MapPosition(rightHand, p.hands[1].gameObject.transform);
             }
         }
         
