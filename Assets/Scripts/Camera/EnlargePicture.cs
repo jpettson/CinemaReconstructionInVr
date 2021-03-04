@@ -10,7 +10,7 @@ public class EnlargePicture : MonoBehaviour
     public GameObject close;
 
     void update(){
-        Vector3 startPosition = far.GetComponent<MeshRenderer>().transform.position;
+     //   Vector3 startPosition = far.GetComponent<MeshRenderer>().transform.position;
     }
 
     public void OnMouseEnter(){
@@ -19,8 +19,8 @@ public class EnlargePicture : MonoBehaviour
     }
 
     public void OnMouseExit(){    
-        picture.transform.position = startPosition;
-        far.transform position = startPosition;
+        //picture.transform.position = startPosition;
+      //  far.transform position = startPosition;
        // picture.transform.localScale = new Vector3(0,0,0);
     }
 }

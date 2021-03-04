@@ -3086,6 +3086,7 @@ GameObject:
   - component: {fileID: 258758541}
   - component: {fileID: 258758540}
   - component: {fileID: 258758542}
+  - component: {fileID: 258758544}
   m_Layer: 0
   m_Name: Networkmanager
   m_TagString: Untagged
@@ -3178,6 +3179,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &258758544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258758539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aab4c8111b7c411b9b92cf3dbc5bd4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dontDestroyOnLoad: 1
+  runInBackground: 1
+  autoStartServerBuild: 1
+  showDebugMessages: 0
+  serverTickRate: 30
+  serverBatching: 0
+  serverBatchInterval: 0
+  offlineScene: 
+  onlineScene: 
+  transport: {fileID: 258758540}
+  networkAddress: localhost
+  maxConnections: 100
+  disconnectInactiveConnections: 0
+  disconnectInactiveTimeout: 60
+  authenticator: {fileID: 0}
+  playerPrefab: {fileID: 0}
+  autoCreatePlayer: 1
+  playerSpawnMethod: 0
+  spawnPrefabs: []
 --- !u!1 &261880917 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7788424341243201549, guid: 52d18c2b52acc7444912fcf9a7f5401a,
@@ -15680,7 +15712,6 @@ GameObject:
   - component: {fileID: 1275862155}
   - component: {fileID: 1275862154}
   - component: {fileID: 1275862153}
-  - component: {fileID: 1275862156}
   - component: {fileID: 1275862157}
   m_Layer: 0
   m_Name: Photo (1)
@@ -15766,21 +15797,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1275862151}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1275862156
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1275862151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c54752476e469654bb73ed4323fbb3fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  picture: {fileID: 1275862151}
-  far: {fileID: 697775121}
-  close: {fileID: 39521988}
 --- !u!65 &1275862157
 BoxCollider:
   m_ObjectHideFlags: 0
