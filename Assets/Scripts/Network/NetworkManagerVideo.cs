@@ -19,9 +19,9 @@ public class NetworkManagerVideo : NetworkManager
       //  Vector3 playerSpawnLocation = new Vector3(-35-spawnedPersonas, 0, -8);
         spawnedPersonas = spawnedPersonas + 1;
 
+        
 
-
-
+       
         GameObject player = Instantiate(playerPrefab, startLocation.position, startLocation.rotation);
         GameObject videoPlayer = Instantiate(this.spawnPrefabs[0], videoPlayerLocation.position, videoPlayerLocation.rotation);
         NetworkIdentity playerId = player.GetComponent<NetworkIdentity>();
