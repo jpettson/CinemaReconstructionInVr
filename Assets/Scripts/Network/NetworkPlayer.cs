@@ -26,7 +26,6 @@ public class NetworkPlayer : NetworkBehaviour
 
         if (isLocalPlayer)
         {
-
             p = Player.instance;
             head.gameObject.SetActive(false);
             leftHand.gameObject.SetActive(false);
