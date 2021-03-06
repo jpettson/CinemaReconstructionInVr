@@ -60,6 +60,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -97,7 +98,7 @@ MonoBehaviour:
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -145,6 +146,7 @@ GameObject:
   - component: {fileID: 3201685259810623242}
   - component: {fileID: 831535032578378168}
   - component: {fileID: 8389928804772038798}
+  - component: {fileID: 1266265181674796898}
   m_Layer: 5
   m_Name: ListItem
   m_TagString: MovieListItem
@@ -161,7 +163,7 @@ RectTransform:
   m_GameObject: {fileID: 1807982251245770543}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5292, y: 1.141984, z: 1}
   m_Children:
   - {fileID: 1003534606607178030}
   - {fileID: 8153421154857602481}
@@ -170,7 +172,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0023651, y: 123.60199}
+  m_AnchoredPosition: {x: -0.43642, y: 123.42}
   m_SizeDelta: {x: 393.84454, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3201685259810623242
@@ -208,6 +210,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 369.3801, y: 72.10713, z: 0.0149888545}
   m_Center: {x: 0.82901126, y: 1.280101, z: -0.0013440902}
+--- !u!114 &1266265181674796898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807982251245770543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &3710401822499939946
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,6 +286,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.392}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
