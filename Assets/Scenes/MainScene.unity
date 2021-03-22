@@ -16927,6 +16927,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63248f7a2957abc4e825f94f30eb42d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1744151055 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4939016016013794637, guid: 92ea1c4128094254d87de76bd00eb5e7,
+    type: 3}
+  m_PrefabInstance: {fileID: 4939016016675154725}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1744151058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744151055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3c7cc8f705c81f4f90f5644a8924afe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxIntensity: 10
+  downDimmer: 0
+  upDimmer: 1
+  intestitySpeed: 0.5
 --- !u!1 &1748028353 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1229738329116089187, guid: 52d18c2b52acc7444912fcf9a7f5401a,
@@ -18025,6 +18047,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1837404606 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4939016016406160890, guid: 92ea1c4128094254d87de76bd00eb5e7,
+    type: 3}
+  m_PrefabInstance: {fileID: 4939016016675154725}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1837404609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837404606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3c7cc8f705c81f4f90f5644a8924afe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxIntensity: 10
+  downDimmer: 0
+  upDimmer: 1
+  intestitySpeed: 30
 --- !u!1 &1839040213 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7569757352854446566, guid: 52d18c2b52acc7444912fcf9a7f5401a,
@@ -20683,6 +20727,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4939016016013794636, guid: 92ea1c4128094254d87de76bd00eb5e7,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4939016016844139404, guid: 92ea1c4128094254d87de76bd00eb5e7,
         type: 3}
       propertyPath: m_RootOrder
@@ -20742,6 +20791,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Lights
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939016017161877028, guid: 92ea1c4128094254d87de76bd00eb5e7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.29
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92ea1c4128094254d87de76bd00eb5e7, type: 3}
