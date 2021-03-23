@@ -538,9 +538,16 @@ GameObject:
   m_Component:
   - component: {fileID: 3563746273563445622}
   - component: {fileID: 3563746273573415034}
+  - component: {fileID: 3482846254943386966}
+  - component: {fileID: 5110207983263530158}
+  - component: {fileID: 6800386647736715480}
+  - component: {fileID: 1810619253213239245}
+  - component: {fileID: -5498904903301274553}
+  - component: {fileID: 6591625070081644101}
+  - component: {fileID: 7853111737670720393}
   m_Layer: 0
   m_Name: Player_VR
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -594,6 +601,122 @@ MonoBehaviour:
     actionPath: /actions/default/in/HeadsetOnHead
     needsReinit: 1
   allowToggleTo2D: 1
+--- !u!114 &3482846254943386966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3563746273563015438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306ce16abe4324c4a9693e71f113db0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserPointer: {fileID: 4049703582847129632}
+--- !u!114 &5110207983263530158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3563746273563015438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
+--- !u!114 &6800386647736715480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3563746273563015438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9df47cde6bbbc0f46af47fdc622c9e0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  videoPlayer: {fileID: 0}
+--- !u!143 &1810619253213239245
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3563746273563015438}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-5498904903301274553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3563746273563015438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81316258f0fe42b46b521f3880084539, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movePress:
+    actionPath: /actions/default/in/Teleport
+    needsReinit: 0
+  moveValue:
+    actionPath: /actions/default/in/TouchpadPosition
+    needsReinit: 0
+  speed: 0
+  sensitivity: 0.1
+  maxSpeed: 1
+  gravity: 9.82
+  head: {fileID: 3563746273563438606}
+  VRCamera: {fileID: 3563746273563464038}
+--- !u!114 &6591625070081644101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3563746273563015438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bb3111ce641934458540382e788e0e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuPress:
+    actionPath: /actions/default/in/MenuButton
+    needsReinit: 0
+  teleport: {fileID: 0}
+  teleportPoints: {fileID: 0}
+--- !u!114 &7853111737670720393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3563746273563015438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbbb0bcf22a9603479157a6410c19504, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VRCamera: {fileID: 3563746273562996904}
 --- !u!1 &3563746273563017056
 GameObject:
   m_ObjectHideFlags: 0
@@ -1053,6 +1176,7 @@ GameObject:
   - component: {fileID: 3563746273573219314}
   - component: {fileID: 3522371478790514352}
   - component: {fileID: 3522371525207155640}
+  - component: {fileID: 4049703582847129632}
   m_Layer: 26
   m_Name: RightHand
   m_TagString: Untagged
@@ -1182,6 +1306,30 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967039
   hand: {fileID: 0}
+--- !u!114 &4049703582847129632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3563746273563226096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2f511c1adaa1e94ebe7ca97bbcabd17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pose: {fileID: 0}
+  interactWithUI:
+    actionPath: /actions/default/in/InteractUI
+    needsReinit: 0
+  active: 1
+  color: {r: 0, g: 0, b: 0, a: 0}
+  thickness: 0.002
+  clickColor: {r: 0, g: 1, b: 0, a: 1}
+  holder: {fileID: 0}
+  pointer: {fileID: 0}
+  addRigidBody: 0
+  reference: {fileID: 0}
 --- !u!1 &3563746273563233730
 GameObject:
   m_ObjectHideFlags: 0
