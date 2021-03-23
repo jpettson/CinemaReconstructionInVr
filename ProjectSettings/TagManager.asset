@@ -6,6 +6,7 @@ TagManager:
   tags:
   - VideoPlayer
   - MovieListItem
+  - LobbyPicture
   layers:
   - Default
   - TransparentFX
