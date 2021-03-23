@@ -60,6 +60,10 @@
       "requirement": "suggested"
     },
     {
+      "name": "/actions/default/in/PauseButton",
+      "type": "boolean"
+    },
+    {
       "name": "/actions/default/out/Haptic",
       "type": "vibration"
     },

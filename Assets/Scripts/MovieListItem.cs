@@ -37,11 +37,6 @@ public class MovieListItem : NetworkBehaviour
     } 
 
 
-    void TaskOnClick()
-    {
-        GameObject.FindGameObjectWithTag("Player").GetComponent<VideoController>().CmdLoadVideo(filePath);
-    }
-
 
     public void HighLight()
     {

@@ -23,7 +23,7 @@ public class NetworkManagerVideo : NetworkManager
 
        
         GameObject player = Instantiate(playerPrefab, startLocation.position, startLocation.rotation);
-        GameObject videoPlayer = Instantiate(this.spawnPrefabs[0], videoPlayerLocation.position, videoPlayerLocation.rotation);
+    //    GameObject videoPlayer = Instantiate(this.spawnPrefabs[0], videoPlayerLocation.position, videoPlayerLocation.rotation);
         NetworkIdentity playerId = player.GetComponent<NetworkIdentity>();
 
         
@@ -31,9 +31,9 @@ public class NetworkManagerVideo : NetworkManager
         NetworkServer.AddPlayerForConnection(conn, player);
         playerId.AssignClientAuthority(conn);
 
-        NetworkServer.Spawn(videoPlayer, player);
+     //   NetworkServer.Spawn(videoPlayer, player);
 
         Debug.Log(playerId.netId);
-        Debug.Log(videoPlayer.GetComponent<NetworkIdentity>().netId);
+      //  Debug.Log(videoPlayer.GetComponent<NetworkIdentity>().netId);
     }
 }
