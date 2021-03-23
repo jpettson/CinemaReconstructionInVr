@@ -4,10 +4,15 @@ using UnityEngine;
 using Mirror;
 using System;
 using UnityEngine.Video;
+using Valve.VR;
+
 public class VideoController : NetworkBehaviour
 {
-    [SerializeField]
+
     public VideoPlayer videoPlayer;
+
+
+    
 
     [SyncVar]
     private bool isVideoPlaying = false;
@@ -16,14 +21,9 @@ public class VideoController : NetworkBehaviour
 
     private void Start()
     {
-        foreach (KeyValuePair<uint, NetworkIdentity> entry in NetworkIdentity.spawned)
-        {
-            if (entry.Value.netId == GetComponentInParent<NetworkIdentity>().netId + 1)
-            {
-                videoPlayer = entry.Value.gameObject.GetComponentInChildren<VideoPlayer>();
-                Debug.Log(entry.Value.netId);
-            }
-        }
+
+        videoPlayer = GameObject.FindGameObjectWithTag("VideoPlayer").GetComponent<VideoPlayer>();
+
         if (isVideoPlaying)
         {
             InitializeVideoPlayer();
@@ -62,60 +62,12 @@ public class VideoController : NetworkBehaviour
 
     void Update()
     {
-        if (isLocalPlayer && Input.GetKeyDown(KeyCode.Space))
-        {
-            CmdPause();
-            
-        } else if (isLocalPlayer && Input.GetKeyDown(KeyCode.G))
-        {
-            if (gameObject.GetComponentInChildren<MouseLook>().currentHighlightedObject)
-            {
-                CmdLoadVideo(gameObject.GetComponentInChildren<MouseLook>().currentHighlightedObject.GetComponent<MovieListItem>().GetFilePath());
-
-            }
-        }
         if (videoPlayer.isPlaying)
         {
             currentFrame = videoPlayer.frame;
         }
     }
+
    
-    [Command]
-    void CmdPause()
-    {
-        RpcPause();
-    }
-
-    [ClientRpc]
-    void RpcPause()
-    {
-        Debug.Log("memes");
-        isVideoPlaying = !isVideoPlaying;
-        if (videoPlayer.isPlaying)
-        {
-            videoPlayer.Pause();
-        }
-        else
-        {
-            videoPlayer.Play();
-        }
-    }
-
-
-    [Command]
-    public void CmdLoadVideo(string path)
-    {
-        RpcLoadVideo(path);
-    }
-
-    [ClientRpc]
-    void RpcLoadVideo(string path)
-    {
-        InitializeVideoPlayer();
-
-        videoPlayer.url = path;
-
-        videoPlayer.Prepare();
-    }
 
 }

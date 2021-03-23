@@ -253,13 +253,33 @@
                "path" : "/user/hand/left/input/trackpad"
             },
             {
-               "inputs" : {
-                  "position" : {
-                     "output" : "/actions/default/in/touchpadposition"
-                  }
-               },
+               "inputs" : {},
                "mode" : "trackpad",
                "path" : "/user/hand/right/input/trackpad"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/default/in/menubutton"
+                  },
+                  "long" : {
+                     "output" : "/actions/default/in/menubutton"
+                  }
+               },
+               "mode" : "button",
+               "path" : "/user/hand/left/input/application_menu"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/default/in/menubutton"
+                  },
+                  "long" : {
+                     "output" : "/actions/default/in/menubutton"
+                  }
+               },
+               "mode" : "button",
+               "path" : "/user/hand/right/input/application_menu"
             }
          ]
       },
@@ -307,7 +327,7 @@
    "category" : "steamvr_input",
    "controller_type" : "vive_controller",
    "description" : "",
-   "name" : "vive_controller",
+   "name" : "Saved Cinema Reconstruction in VR [Testing] configuration for Vive Controller",
    "options" : {},
    "simulated_actions" : []
 }

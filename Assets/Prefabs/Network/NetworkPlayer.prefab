@@ -165,6 +165,9 @@ MonoBehaviour:
   head: {fileID: 3476730790740335676}
   leftHand: {fileID: 5562795004135315108}
   rightHand: {fileID: 5889518751390410661}
+  pauseButton:
+    actionPath: /actions/default/in/GrabGrip
+    needsReinit: 0
 --- !u!114 &1118783297025805248
 MonoBehaviour:
   m_ObjectHideFlags: 0
