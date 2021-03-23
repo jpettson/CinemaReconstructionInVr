@@ -543,6 +543,8 @@ GameObject:
   - component: {fileID: 6800386647736715480}
   - component: {fileID: 1810619253213239245}
   - component: {fileID: -5498904903301274553}
+  - component: {fileID: 6591625070081644101}
+  - component: {fileID: 7853111737670720393}
   m_Layer: 0
   m_Name: Player_VR
   m_TagString: Player
@@ -674,7 +676,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movePress:
-    actionPath: /actions/default/in/MenuButton
+    actionPath: /actions/default/in/Teleport
     needsReinit: 0
   moveValue:
     actionPath: /actions/default/in/TouchpadPosition
@@ -685,6 +687,36 @@ MonoBehaviour:
   gravity: 9.82
   head: {fileID: 3563746273563438606}
   VRCamera: {fileID: 3563746273563464038}
+--- !u!114 &6591625070081644101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3563746273563015438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bb3111ce641934458540382e788e0e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuPress:
+    actionPath: /actions/default/in/MenuButton
+    needsReinit: 0
+  teleport: {fileID: 0}
+  teleportPoints: {fileID: 0}
+--- !u!114 &7853111737670720393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3563746273563015438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbbb0bcf22a9603479157a6410c19504, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VRCamera: {fileID: 3563746273562996904}
 --- !u!1 &3563746273563017056
 GameObject:
   m_ObjectHideFlags: 0

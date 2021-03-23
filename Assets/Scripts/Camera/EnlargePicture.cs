@@ -62,5 +62,6 @@ public class EnlargePicture : MonoBehaviour
         isTargeted = false;
         transform.localScale = startSize;
         transform.localPosition = startPosition;
+        elapsedFrames = 0;
     }
 }
