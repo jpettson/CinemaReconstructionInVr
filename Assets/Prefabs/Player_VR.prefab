@@ -731,6 +731,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de1fa3f53c95aca41a58621d0b119882, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menuPress:
+    actionPath: 
+    needsReinit: 0
+  tutorialScreen: {fileID: 0}
 --- !u!1 &3563746273563017056
 GameObject:
   m_ObjectHideFlags: 0
@@ -2945,7 +2949,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1520957176620603503
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3060,6 +3064,8 @@ GameObject:
   - component: {fileID: 3929437230909921897}
   - component: {fileID: 7810447122774241687}
   - component: {fileID: 2757156728109523484}
+  - component: {fileID: 5838155249137391673}
+  - component: {fileID: 5237059476553826097}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -3076,7 +3082,7 @@ RectTransform:
   m_GameObject: {fileID: 8571493842325338072}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 2.323}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 1}
+  m_LocalScale: {x: 0.000025, y: 0.000025, z: 1}
   m_Children:
   - {fileID: 1520957176620603503}
   m_Father: {fileID: 3563746273563464038}
@@ -3085,7 +3091,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.0451, y: 0}
-  m_SizeDelta: {x: 233.9467, y: 100}
+  m_SizeDelta: {x: 100000, y: 100000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &3929437230909921897
 Canvas:
@@ -3148,3 +3154,38 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!222 &5838155249137391673
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8571493842325338072}
+  m_CullTransparentMesh: 1
+--- !u!114 &5237059476553826097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8571493842325338072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 2800000, guid: ee008a8bf0aadf042831f54a96cd255d, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
