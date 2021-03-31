@@ -16,20 +16,33 @@ public class TeleportToLocation : MonoBehaviour
 
     private bool state = false;
 
+    bool hastped = false;
+
     void Update() {
         state = SteamVR_Input.GetState("X_Button_Press", SteamVR_Input_Sources.LeftHand);
-        if (state && isInside) {
+        if (state && isInside && !hastped) {
             player.transform.position = projectorRoomLocation.transform.position;
-            new WaitForSeconds(5);
+            hastped = true;
         }
     }
 
     public void OnTriggerEnter(){
+        
         isInside = true;
+        
      }
 
     public void OnTriggerExit() {
          isInside = false;
+        hastped = false;
+
+
+    }
+
+
+    IEnumerator ExampleCoroutine()
+    {
+        yield return new WaitForSeconds(566666666);
 
     }
 }
