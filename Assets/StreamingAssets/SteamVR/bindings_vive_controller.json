@@ -327,7 +327,7 @@
    "category" : "steamvr_input",
    "controller_type" : "vive_controller",
    "description" : "",
-   "name" : "Saved Cinema Reconstruction in VR [Testing] configuration for Vive Controller",
+   "name" : "Cinema Reconstruction in VR (Default for Vive)",
    "options" : {},
    "simulated_actions" : []
 }

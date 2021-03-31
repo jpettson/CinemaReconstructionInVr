@@ -83,7 +83,7 @@ public class NetworkPlayer : NetworkBehaviour
             
             CmdLoadVideo(e.target.gameObject.GetComponent<MovieListItem>().GetFilePath());
             
-        }
+        } 
     }
 
 
