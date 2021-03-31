@@ -64,6 +64,10 @@
       "type": "boolean"
     },
     {
+      "name": "/actions/default/in/X_Button_Press",
+      "type": "boolean"
+    },
+    {
       "name": "/actions/default/out/Haptic",
       "type": "vibration"
     },
@@ -185,7 +189,8 @@
       "/actions/default/in/SnapTurnLeft": "Snap Turn (Left)",
       "/actions/default/in/SnapTurnRight": "Snap Turn (Right)",
       "/actions/default/in/TouchpadPosition": "Touchpad Position",
-      "/actions/default/in/MenuButton": "Menu button"
+      "/actions/default/in/MenuButton": "Menu button",
+      "/actions/default/in/X_Button_Press": "X_Button_Press"
     }
   ]
 }
