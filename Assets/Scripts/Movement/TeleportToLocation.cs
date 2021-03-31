@@ -20,6 +20,7 @@ public class TeleportToLocation : MonoBehaviour
         state = SteamVR_Input.GetState("X_Button_Press", SteamVR_Input_Sources.LeftHand);
         if (state && isInside) {
             player.transform.position = projectorRoomLocation.transform.position;
+            new WaitForSeconds(5);
         }
     }
 
