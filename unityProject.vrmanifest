@@ -5,7 +5,7 @@
       "app_key": "application.generated.unity.cinemareconstructioninvr.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "D:\\Chalmers IT\\CinemaReconstructionInVr\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "action_manifest_path": "A:\\Gits\\CinemaReconstructionInVr\\Assets\\StreamingAssets\\SteamVR\\actions.json",
       "strings": {
         "en_us": {
           "name": "Cinema Reconstruction in VR [Testing]"
