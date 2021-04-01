@@ -6,6 +6,7 @@ using Mirror;
 using UnityEngine.Video;
 using Valve.VR;
 using Valve.VR.Extras;
+using System.IO;
 
 public class NetworkPlayer : NetworkBehaviour
 {
@@ -81,7 +82,7 @@ public class NetworkPlayer : NetworkBehaviour
         if (e.target.CompareTag("MovieListItem"))
         {
             
-            CmdLoadVideo(e.target.gameObject.GetComponent<MovieListItem>().GetFilePath());
+            CmdLoadVideo(Application.streamingAssetsPath + "/" + Path.GetFileName(e.target.gameObject.GetComponent<MovieListItem>().GetFilePath()));
             
         } 
     }

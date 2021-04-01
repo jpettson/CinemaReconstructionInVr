@@ -7,11 +7,11 @@ using Valve.VR.InteractionSystem;
 public class GroundTriggerProjectorRoom : MonoBehaviour
 {
     public GameObject door;
-    private Player p;
+    public GameObject p;
 
     private void Start()
     {
-        p = Player.instance;
+
     }
 
     public void OnTriggerEnter(){

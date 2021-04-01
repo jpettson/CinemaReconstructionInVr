@@ -42,7 +42,7 @@ public class VideoController : NetworkBehaviour
 
     IEnumerator playVideo()
     {
-        videoPlayer.url = "C:\\Users\\adam_\\Downloads\\yt1s.com - Rick Astley  Never Gonna Give You Up Video_360p.mp4";
+      //  videoPlayer.url = "C:\\Users\\adam_\\Downloads\\yt1s.com - Rick Astley  Never Gonna Give You Up Video_360p.mp4";
 
         videoPlayer.Prepare();
 

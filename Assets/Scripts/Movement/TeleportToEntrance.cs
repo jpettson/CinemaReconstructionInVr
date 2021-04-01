@@ -16,14 +16,13 @@ public class TeleportToEntrance : MonoBehaviour
 
     public void Start()
     {
-        Player p = Player.instance;
-        p.GetComponentInChildren<SteamVR_LaserPointer>().PointerClick += PointerClickTeleportToEntrance;
+        player.GetComponentInChildren<SteamVR_LaserPointer>().PointerClick += PointerClickTeleportToEntrance;
         
     }
 
     public void PointerClickTeleportToEntrance(object sender, PointerEventArgs e)
     {
-        if (e.target.CompareTag("TeleportDoor"))
+        if (e.target.CompareTag("TeleportDoorProjector"))
         {
             if (projectorRoomDoor.gameObject.activeSelf)
             {
