@@ -12,10 +12,11 @@ public class VideoController : NetworkBehaviour
     public VideoPlayer videoPlayer;
 
 
-    
+    public GameObject[] saloonlights;
+    public GameObject[] projectorlights;
 
     [SyncVar]
-    private bool isVideoPlaying = false;
+    public bool isVideoPlaying = false;
     [SyncVar]
     private long currentFrame;
 
@@ -23,6 +24,8 @@ public class VideoController : NetworkBehaviour
     {
 
         videoPlayer = GameObject.FindGameObjectWithTag("VideoPlayer").GetComponent<VideoPlayer>();
+        saloonlights = GameObject.FindGameObjectsWithTag("Saloonlight");
+        projectorlights = GameObject.FindGameObjectsWithTag("VideoPlayerlight");
 
         if (isVideoPlaying)
         {
@@ -41,7 +44,7 @@ public class VideoController : NetworkBehaviour
 
     IEnumerator playVideo()
     {
-        videoPlayer.url = "C:\\Users\\adam_\\Downloads\\yt1s.com - Rick Astley  Never Gonna Give You Up Video_360p.mp4";
+      //  videoPlayer.url = "C:\\Users\\adam_\\Downloads\\yt1s.com - Rick Astley  Never Gonna Give You Up Video_360p.mp4";
 
         videoPlayer.Prepare();
 
@@ -65,7 +68,28 @@ public class VideoController : NetworkBehaviour
         if (videoPlayer.isPlaying)
         {
             currentFrame = videoPlayer.frame;
+            foreach(GameObject light in saloonlights)
+            {
+                light.SetActive(false);
+            }
+            foreach(GameObject light in projectorlights)
+            {
+                light.SetActive(true);
+            }
+
         }
+        else {
+            foreach (GameObject light in saloonlights)
+            {
+                light.SetActive(true);
+            }
+            foreach (GameObject light in projectorlights)
+            {
+                light.SetActive(false);
+            }
+        }
+
+
     }
 
    

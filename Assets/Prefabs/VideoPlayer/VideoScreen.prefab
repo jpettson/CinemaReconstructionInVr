@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2561268647314391070}
   - component: {fileID: 2561268647314391071}
   - component: {fileID: 2561268647314391064}
-  - component: {fileID: -4027439197347252355}
   - component: {fileID: 7733195835235399383}
   m_Layer: 0
   m_Name: VideoScreen
@@ -99,22 +98,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &-4027439197347252355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2561268647314391065}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneId: 0
-  serverOnly: 0
-  m_AssetId: 
-  hasSpawned: 0
 --- !u!114 &7733195835235399383
 MonoBehaviour:
   m_ObjectHideFlags: 0

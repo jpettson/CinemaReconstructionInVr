@@ -27,9 +27,9 @@ public class FileExplorerUI : MonoBehaviour
     void Start()
     {
 
-        Debug.Log(Application.dataPath);
+        Debug.Log(Application.streamingAssetsPath);
         //Append the '@' verbatim to the directory path string  
-        this.directoryPath = @"" + Application.dataPath; //this.directoryPath
+        this.directoryPath = @"" + Application.streamingAssetsPath; //this.directoryPath
 
         try
         {
@@ -53,7 +53,7 @@ public class FileExplorerUI : MonoBehaviour
             foreach (string file in correctFiles)
             {
                 GameObject g = Instantiate(listItem, scrollView);
-                g.GetComponent<MovieListItem>().Initiate("Assets/" + Path.GetFileName(file));
+                g.GetComponent<MovieListItem>().Initiate("StreamingAssets/" + Path.GetFileName(file));
             }
 
             
