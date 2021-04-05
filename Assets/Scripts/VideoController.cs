@@ -10,11 +10,6 @@ public class VideoController : NetworkBehaviour
 {
 
     public VideoPlayer videoPlayer;
-
-
-    public GameObject[] saloonlights;
-    public GameObject[] projectorlights;
-
     [SyncVar]
     public bool isVideoPlaying = false;
     [SyncVar]
@@ -24,9 +19,6 @@ public class VideoController : NetworkBehaviour
     {
 
         videoPlayer = GameObject.FindGameObjectWithTag("VideoPlayer").GetComponent<VideoPlayer>();
-        saloonlights = GameObject.FindGameObjectsWithTag("Saloonlight");
-        projectorlights = GameObject.FindGameObjectsWithTag("VideoPlayerlight");
-
         if (isVideoPlaying)
         {
             InitializeVideoPlayer();
@@ -68,26 +60,7 @@ public class VideoController : NetworkBehaviour
         if (videoPlayer.isPlaying)
         {
             currentFrame = videoPlayer.frame;
-            foreach(GameObject light in saloonlights)
-            {
-                light.SetActive(false);
-            }
-            foreach(GameObject light in projectorlights)
-            {
-                light.SetActive(true);
-            }
-
-        }
-        else {
-            foreach (GameObject light in saloonlights)
-            {
-                light.SetActive(true);
-            }
-            foreach (GameObject light in projectorlights)
-            {
-                light.SetActive(false);
-            }
-        }
+}
 
 
     }

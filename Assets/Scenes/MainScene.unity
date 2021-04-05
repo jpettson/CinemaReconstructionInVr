@@ -387,7 +387,7 @@ GameObject:
   - component: {fileID: 20116971}
   m_Layer: 0
   m_Name: Spot5
-  m_TagString: Saloonlight
+  m_TagString: Frontlight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -579,7 +579,7 @@ GameObject:
   - component: {fileID: 26212894}
   m_Layer: 0
   m_Name: Point Light (1)
-  m_TagString: Saloonlight
+  m_TagString: Misclight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1169,7 +1169,7 @@ GameObject:
   - component: {fileID: 104584112}
   m_Layer: 0
   m_Name: RearLight1
-  m_TagString: Saloonlight
+  m_TagString: Walkwaylight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1419,7 +1419,7 @@ GameObject:
   - component: {fileID: 136143510}
   m_Layer: 0
   m_Name: Spot1 (1)
-  m_TagString: Saloonlight
+  m_TagString: Ceilinglight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1558,6 +1558,31 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 367488874}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &192536922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192536912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3c7cc8f705c81f4f90f5644a8924afe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  videoPlayer: {fileID: 0}
+  walkwaylights: []
+  projectorlights: []
+  frontlights: []
+  ceilinglights: []
+  misclights: []
+  intensitySpeed: 0.5
+  frontIntensity: 2
+  walkwayIntensity: 2
+  ceilingIntensity: 3
+  miscIntensity: 0.5
 --- !u!1 &197097021 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1292043252959764498, guid: 130745d9caad3604a8d9aecf5d41685a,
@@ -1823,7 +1848,7 @@ GameObject:
   - component: {fileID: 222740429}
   m_Layer: 0
   m_Name: Point Light (1)
-  m_TagString: Saloonlight
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2124,7 +2149,7 @@ GameObject:
   - component: {fileID: 251819914}
   m_Layer: 0
   m_Name: Spot2
-  m_TagString: Saloonlight
+  m_TagString: Ceilinglight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2277,7 +2302,7 @@ GameObject:
   - component: {fileID: 272178667}
   m_Layer: 0
   m_Name: Spot5
-  m_TagString: Saloonlight
+  m_TagString: Ceilinglight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2467,7 +2492,7 @@ GameObject:
   - component: {fileID: 289040186}
   m_Layer: 0
   m_Name: Spot1 (2)
-  m_TagString: Saloonlight
+  m_TagString: Ceilinglight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2633,7 +2658,7 @@ GameObject:
   - component: {fileID: 312314933}
   m_Layer: 0
   m_Name: ProjectorRoomLight
-  m_TagString: Saloonlight
+  m_TagString: Misclight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2805,7 +2830,7 @@ GameObject:
   - component: {fileID: 335840662}
   m_Layer: 0
   m_Name: Spot1
-  m_TagString: Saloonlight
+  m_TagString: Ceilinglight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3014,7 +3039,7 @@ GameObject:
   - component: {fileID: 351957256}
   m_Layer: 0
   m_Name: Spot4
-  m_TagString: Saloonlight
+  m_TagString: Ceilinglight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4054,7 +4079,7 @@ GameObject:
   - component: {fileID: 469039962}
   m_Layer: 0
   m_Name: Spot1
-  m_TagString: Saloonlight
+  m_TagString: Ceilinglight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4737,7 +4762,7 @@ GameObject:
   - component: {fileID: 527772137}
   m_Layer: 0
   m_Name: Spot4
-  m_TagString: Saloonlight
+  m_TagString: Ceilinglight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4930,7 +4955,7 @@ GameObject:
   - component: {fileID: 550156610}
   m_Layer: 0
   m_Name: Spot1
-  m_TagString: Saloonlight
+  m_TagString: Ceilinglight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5634,7 +5659,7 @@ GameObject:
   - component: {fileID: 617350058}
   m_Layer: 0
   m_Name: Point4
-  m_TagString: Saloonlight
+  m_TagString: Walkwaylight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5824,7 +5849,7 @@ GameObject:
   - component: {fileID: 636791016}
   m_Layer: 0
   m_Name: Spot1 (5)
-  m_TagString: Saloonlight
+  m_TagString: Ceilinglight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5977,7 +6002,7 @@ GameObject:
   - component: {fileID: 652359674}
   m_Layer: 0
   m_Name: Spot2
-  m_TagString: Saloonlight
+  m_TagString: Ceilinglight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6130,7 +6155,7 @@ GameObject:
   - component: {fileID: 663962595}
   m_Layer: 0
   m_Name: RearLight2
-  m_TagString: Saloonlight
+  m_TagString: Walkwaylight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6223,7 +6248,7 @@ GameObject:
   - component: {fileID: 665651430}
   m_Layer: 0
   m_Name: Point Light (2)
-  m_TagString: Saloonlight
+  m_TagString: Misclight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6650,7 +6675,7 @@ GameObject:
   - component: {fileID: 717485348}
   m_Layer: 0
   m_Name: Spot3
-  m_TagString: Saloonlight
+  m_TagString: Ceilinglight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8358,7 +8383,7 @@ GameObject:
   - component: {fileID: 986752471}
   m_Layer: 0
   m_Name: Spot4
-  m_TagString: Saloonlight
+  m_TagString: Frontlight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8471,7 +8496,7 @@ GameObject:
   - component: {fileID: 988220532}
   m_Layer: 0
   m_Name: Spot3
-  m_TagString: Saloonlight
+  m_TagString: Frontlight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8697,7 +8722,7 @@ GameObject:
   - component: {fileID: 1001985182}
   m_Layer: 0
   m_Name: Point3
-  m_TagString: Saloonlight
+  m_TagString: Walkwaylight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9249,7 +9274,7 @@ GameObject:
   - component: {fileID: 1059351508}
   m_Layer: 0
   m_Name: Point1
-  m_TagString: Saloonlight
+  m_TagString: Walkwaylight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9508,7 +9533,7 @@ GameObject:
   - component: {fileID: 1079971330}
   m_Layer: 0
   m_Name: RearLight3
-  m_TagString: Saloonlight
+  m_TagString: Walkwaylight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10199,7 +10224,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1101695813
 Transform:
   m_ObjectHideFlags: 0
@@ -10269,7 +10294,7 @@ GameObject:
   - component: {fileID: 1111664700}
   m_Layer: 0
   m_Name: Point2
-  m_TagString: Saloonlight
+  m_TagString: Walkwaylight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10707,7 +10732,7 @@ GameObject:
   - component: {fileID: 1163528639}
   m_Layer: 0
   m_Name: Point Light (4)
-  m_TagString: Saloonlight
+  m_TagString: Misclight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11504,7 +11529,7 @@ GameObject:
   - component: {fileID: 1263155909}
   m_Layer: 0
   m_Name: Point2
-  m_TagString: Saloonlight
+  m_TagString: Walkwaylight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11677,7 +11702,7 @@ GameObject:
   - component: {fileID: 1278243344}
   m_Layer: 0
   m_Name: Spot5
-  m_TagString: Saloonlight
+  m_TagString: Ceilinglight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12025,7 +12050,7 @@ GameObject:
   - component: {fileID: 1304373801}
   m_Layer: 0
   m_Name: Spot2
-  m_TagString: Saloonlight
+  m_TagString: Frontlight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12178,7 +12203,7 @@ GameObject:
   - component: {fileID: 1339865017}
   m_Layer: 0
   m_Name: Point1
-  m_TagString: Saloonlight
+  m_TagString: Walkwaylight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12311,7 +12336,7 @@ GameObject:
   - component: {fileID: 1343931921}
   m_Layer: 0
   m_Name: 7
-  m_TagString: Saloonlight
+  m_TagString: Frontlight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12481,7 +12506,7 @@ GameObject:
   - component: {fileID: 1348374922}
   m_Layer: 0
   m_Name: Spot5
-  m_TagString: Saloonlight
+  m_TagString: Ceilinglight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12720,7 +12745,7 @@ GameObject:
   - component: {fileID: 1387076912}
   m_Layer: 0
   m_Name: Spot1 (4)
-  m_TagString: Saloonlight
+  m_TagString: Ceilinglight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13008,7 +13033,7 @@ GameObject:
   - component: {fileID: 1412424048}
   m_Layer: 0
   m_Name: Point5
-  m_TagString: Saloonlight
+  m_TagString: Walkwaylight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13101,7 +13126,7 @@ GameObject:
   - component: {fileID: 1418092674}
   m_Layer: 0
   m_Name: 8
-  m_TagString: Saloonlight
+  m_TagString: Frontlight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13323,7 +13348,7 @@ GameObject:
   - component: {fileID: 1435656358}
   m_Layer: 0
   m_Name: Point5
-  m_TagString: Saloonlight
+  m_TagString: Walkwaylight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13629,7 +13654,7 @@ GameObject:
   - component: {fileID: 1456719879}
   m_Layer: 0
   m_Name: Spot1 (3)
-  m_TagString: Saloonlight
+  m_TagString: Ceilinglight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14396,7 +14421,7 @@ GameObject:
   - component: {fileID: 1546967891}
   m_Layer: 0
   m_Name: DirectLightLeft
-  m_TagString: Saloonlight
+  m_TagString: Misclight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14509,7 +14534,7 @@ GameObject:
   - component: {fileID: 1550341072}
   m_Layer: 0
   m_Name: Spot1
-  m_TagString: Saloonlight
+  m_TagString: Frontlight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14622,7 +14647,7 @@ GameObject:
   - component: {fileID: 1560661011}
   m_Layer: 0
   m_Name: Spot3
-  m_TagString: Saloonlight
+  m_TagString: Ceilinglight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15378,7 +15403,7 @@ GameObject:
   - component: {fileID: 1610355195}
   m_Layer: 0
   m_Name: Point Light (5)
-  m_TagString: Saloonlight
+  m_TagString: Misclight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18543,7 +18568,7 @@ GameObject:
   - component: {fileID: 1683693982}
   m_Layer: 0
   m_Name: Spot3
-  m_TagString: Saloonlight
+  m_TagString: Ceilinglight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19444,7 +19469,7 @@ GameObject:
   - component: {fileID: 1799824525}
   m_Layer: 0
   m_Name: 6
-  m_TagString: Saloonlight
+  m_TagString: Frontlight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20065,7 +20090,7 @@ GameObject:
   - component: {fileID: 1875810242}
   m_Layer: 0
   m_Name: DirectLightDown
-  m_TagString: Saloonlight
+  m_TagString: Misclight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20198,7 +20223,7 @@ GameObject:
   - component: {fileID: 1903085177}
   m_Layer: 0
   m_Name: DirectLightRight
-  m_TagString: Saloonlight
+  m_TagString: Misclight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20375,7 +20400,7 @@ GameObject:
   - component: {fileID: 1908539457}
   m_Layer: 0
   m_Name: Spot2
-  m_TagString: Saloonlight
+  m_TagString: Ceilinglight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20605,7 +20630,7 @@ GameObject:
   - component: {fileID: 1946288547}
   m_Layer: 0
   m_Name: Point3
-  m_TagString: Saloonlight
+  m_TagString: Walkwaylight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20818,7 +20843,7 @@ GameObject:
   - component: {fileID: 1979251700}
   m_Layer: 0
   m_Name: Point4
-  m_TagString: Saloonlight
+  m_TagString: Walkwaylight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21284,7 +21309,7 @@ GameObject:
   - component: {fileID: 2043499468}
   m_Layer: 0
   m_Name: Spot4
-  m_TagString: Saloonlight
+  m_TagString: Ceilinglight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21891,12 +21916,12 @@ PrefabInstance:
     - target: {fileID: 5526168352957513444, guid: 1160edc51c0b2424792198a30425bdd4,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5526168352957513444, guid: 1160edc51c0b2424792198a30425bdd4,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5526168352957513444, guid: 1160edc51c0b2424792198a30425bdd4,
         type: 3}
@@ -21916,17 +21941,17 @@ PrefabInstance:
     - target: {fileID: 5526168353876035976, guid: 1160edc51c0b2424792198a30425bdd4,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5526168353876035976, guid: 1160edc51c0b2424792198a30425bdd4,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5526168353876035976, guid: 1160edc51c0b2424792198a30425bdd4,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: -17
       objectReference: {fileID: 0}
     - target: {fileID: 5526168354516715989, guid: 1160edc51c0b2424792198a30425bdd4,
         type: 3}
@@ -21936,7 +21961,7 @@ PrefabInstance:
     - target: {fileID: 5526168354516715989, guid: 1160edc51c0b2424792198a30425bdd4,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5526168354516715992, guid: 1160edc51c0b2424792198a30425bdd4,
         type: 3}

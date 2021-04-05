@@ -12,6 +12,10 @@ TagManager:
   - VideoPlayerlight
   - TeleportDoorEntrance
   - TeleportDoorProjector
+  - Walkwaylight
+  - Frontlight
+  - Ceilinglight
+  - Misclight
   layers:
   - Default
   - TransparentFX
