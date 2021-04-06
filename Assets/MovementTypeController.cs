@@ -8,7 +8,7 @@ public class MovementTypeController : MonoBehaviour
 
     public SteamVR_Action_Boolean menuPress = null;
     public GameObject teleport;
-    public GameObject teleportPoints;
+    //public GameObject teleportPoints;
 
     private bool usingTeleport = true;
 
@@ -16,7 +16,7 @@ public class MovementTypeController : MonoBehaviour
     void Start()
     {
         teleport.SetActive(true);
-        teleportPoints.SetActive(true);
+        //teleportPoints.SetActive(true);
     }
 
     // Update is called once per frame
@@ -33,14 +33,14 @@ public class MovementTypeController : MonoBehaviour
         if (usingTeleport)
         {
             teleport.SetActive(false);
-            teleportPoints.SetActive(false);
+            //teleportPoints.SetActive(false);
 
             GetComponent<ContinuousMovement>().enabled = true;
 
         } else
         {
             teleport.SetActive(true);
-            teleportPoints.SetActive(true);
+            //teleportPoints.SetActive(true);
 
             GetComponent<ContinuousMovement>().enabled = false;
         }
