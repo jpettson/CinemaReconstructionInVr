@@ -9,7 +9,7 @@ public class LaserPointer : MonoBehaviour
     private GameObject currentHighlightedObject;
 
 
-    void Awake()
+    void Start()
     {
         laserPointer.PointerIn += PointerInside;
         laserPointer.PointerOut += PointerOutside;

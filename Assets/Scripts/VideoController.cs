@@ -10,12 +10,8 @@ public class VideoController : NetworkBehaviour
 {
 
     public VideoPlayer videoPlayer;
-
-
-    
-
     [SyncVar]
-    private bool isVideoPlaying = false;
+    public bool isVideoPlaying = false;
     [SyncVar]
     private long currentFrame;
 
@@ -23,7 +19,6 @@ public class VideoController : NetworkBehaviour
     {
 
         videoPlayer = GameObject.FindGameObjectWithTag("VideoPlayer").GetComponent<VideoPlayer>();
-
         if (isVideoPlaying)
         {
             InitializeVideoPlayer();
@@ -41,7 +36,7 @@ public class VideoController : NetworkBehaviour
 
     IEnumerator playVideo()
     {
-        videoPlayer.url = "C:\\Users\\adam_\\Downloads\\yt1s.com - Rick Astley  Never Gonna Give You Up Video_360p.mp4";
+      //  videoPlayer.url = "C:\\Users\\adam_\\Downloads\\yt1s.com - Rick Astley  Never Gonna Give You Up Video_360p.mp4";
 
         videoPlayer.Prepare();
 
@@ -65,7 +60,9 @@ public class VideoController : NetworkBehaviour
         if (videoPlayer.isPlaying)
         {
             currentFrame = videoPlayer.frame;
-        }
+}
+
+
     }
 
    

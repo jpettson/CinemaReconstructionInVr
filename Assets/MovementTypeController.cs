@@ -15,7 +15,8 @@ public class MovementTypeController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        teleport.SetActive(true);
+        teleportPoints.SetActive(true);
     }
 
     // Update is called once per frame
