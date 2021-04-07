@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18355241, g: 0.22908819, b: 0.30557826, a: 1}
+  m_IndirectSpecularColor: {r: 0.18355283, g: 0.22908884, b: 0.30557942, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -14944,9 +14944,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4dc507b9b55a46428cba7aee43cbff2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  handleAnimation: {fileID: 0}
   player: {fileID: 192536912}
   projectorRoomLocation: {fileID: 1092733904}
+  handle: {fileID: 0}
 --- !u!114 &1587755435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15249,6 +15249,74 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a58df18ce8f1d5146b0492b4ce99fec0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 192536912}
+  projectorRoomLocation: {fileID: 1256570219}
+--- !u!64 &1592887928
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592887924}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6659003102834268097, guid: a5bedf2b28b4f574884b8287460e4bfd, type: 3}
+--- !u!114 &1592887929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592887924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b93b6a877adcbf94c89a9d6e0c0e844d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateActionSetOnAttach:
+    actionSetPath: 
+  hideHandOnAttach: 1
+  hideSkeletonOnAttach: 0
+  hideControllerOnAttach: 0
+  handAnimationOnPickup: 0
+  setRangeOfMotionOnPickup: -1
+  useHandObjectAttachmentPoint: 1
+  attachEaseIn: 0
+  snapAttachEaseInCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  snapAttachEaseInTime: 0.15
+  snapAttachEaseInCompleted: 0
+  skeletonPoser: {fileID: 0}
+  handFollowTransform: 1
+  highlightOnHover: 1
+  hideHighlight: []
+  hoverPriority: 0
 --- !u!1 &1596199795 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4406072908233387757, guid: 130745d9caad3604a8d9aecf5d41685a,
@@ -19355,7 +19423,6 @@ GameObject:
   - component: {fileID: 1701865615}
   - component: {fileID: 1701865614}
   - component: {fileID: 1701865613}
-  - component: {fileID: 1701865612}
   m_Layer: 0
   m_Name: EntranceLocation
   m_TagString: Untagged
@@ -19363,21 +19430,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1701865612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1701865611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4dc507b9b55a46428cba7aee43cbff2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  handleAnimation: {fileID: 7400000, guid: 7686ff13d665f934b98cc801b1d8c153, type: 2}
-  player: {fileID: 192536912}
-  projectorRoomLocation: {fileID: 1256570219}
 --- !u!114 &1701865613
 MonoBehaviour:
   m_ObjectHideFlags: 0

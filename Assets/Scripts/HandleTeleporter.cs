@@ -4,7 +4,7 @@ using System.Collections;
 
 namespace Valve.VR.InteractionSystem.Sample
 {
-	public class HandleAnim : MonoBehaviour
+	public class HandleTeleporter : MonoBehaviour
 	{
 
 		private Vector3 oldPosition;
@@ -15,6 +15,10 @@ namespace Valve.VR.InteractionSystem.Sample
 		private Interactable interactable;
 
 		private Animator anim;
+
+		public GameObject player;
+		public GameObject projectorRoomLocation;
+
 		void Awake()
 		{
 			var textMeshs = GetComponentsInChildren<TextMesh>();
@@ -58,9 +62,10 @@ namespace Valve.VR.InteractionSystem.Sample
 			}
 			else if (isGrabEnding)
 			{
+				
 				// Detach this object from the hand
 				hand.DetachObject(gameObject);
-
+				player.transform.position = projectorRoomLocation.transform.position;
 				// Call this to undo HoverLock
 				hand.HoverUnlock(interactable);
 
@@ -72,18 +77,18 @@ namespace Valve.VR.InteractionSystem.Sample
 
 		private void OnAttachedToHand(Hand hand)
 		{
-			transform.position = oldPosition;
-			transform.rotation = oldRotation;
+
 			anim.SetBool("playAnim", true);
 			anim.Play("ProjectdoorAnim");
 			anim.SetBool("playAnim", false);
+			
 		}
 
 		private void HandAttachedUpdate(Hand hand)
 		{
-			transform.position = oldPosition;
-			transform.rotation = oldRotation;
+			
 		}
+
 
 		private bool lastHovering = false;
 		private void Update()
