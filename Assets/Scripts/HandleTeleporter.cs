@@ -6,10 +6,6 @@ namespace Valve.VR.InteractionSystem.Sample
 {
 	public class HandleTeleporter : MonoBehaviour
 	{
-
-		private Vector3 oldPosition;
-		private Quaternion oldRotation;
-
 		private Hand.AttachmentFlags attachmentFlags = Hand.AttachmentFlags.DetachFromOtherHand;
 
 		private Interactable interactable;
@@ -21,9 +17,7 @@ namespace Valve.VR.InteractionSystem.Sample
 
 		void Awake()
 		{
-			var textMeshs = GetComponentsInChildren<TextMesh>();
 			anim = GetComponent<Animator>();
-
 			interactable = this.GetComponent<Interactable>();
 		}
 
@@ -40,9 +34,7 @@ namespace Valve.VR.InteractionSystem.Sample
 		}
 
 
-		//-------------------------------------------------
-		// Called every Update() while a Hand is hovering over this object
-		//-------------------------------------------------
+
 		private void HandHoverUpdate(Hand hand)
 		{
 			GrabTypes startingGrabType = hand.GetGrabStarting();
@@ -50,28 +42,15 @@ namespace Valve.VR.InteractionSystem.Sample
 
 			if (interactable.attachedToHand == null && startingGrabType != GrabTypes.None)
 			{
-				// Save our position/rotation so that we can restore it when we detach
-				oldPosition = transform.position;
-				oldRotation = transform.rotation;
-
-				// Call this to continue receiving HandHoverUpdate messages,
-				// and prevent the hand from hovering over anything else
 				hand.HoverLock(interactable);
-				// Attach this object to the hand
 				hand.AttachObject(gameObject, startingGrabType, attachmentFlags);
 			}
 			else if (isGrabEnding)
 			{
 				
-				// Detach this object from the hand
 				hand.DetachObject(gameObject);
 				player.transform.position = projectorRoomLocation.transform.position;
-				// Call this to undo HoverLock
 				hand.HoverUnlock(interactable);
-
-				// Restore position/rotation
-				transform.position = oldPosition;
-				transform.rotation = oldRotation;
 			}
 		}
 
