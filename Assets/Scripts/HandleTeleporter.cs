@@ -15,10 +15,12 @@ namespace Valve.VR.InteractionSystem.Sample
 		public GameObject player;
 		public GameObject projectorRoomLocation;
 
+		private AudioSource audioSource;
 		void Awake()
 		{
 			anim = GetComponent<Animator>();
 			interactable = this.GetComponent<Interactable>();
+			audioSource = this.GetComponent<AudioSource>();
 		}
 
 
@@ -56,10 +58,11 @@ namespace Valve.VR.InteractionSystem.Sample
 
 		private void OnAttachedToHand(Hand hand)
 		{
-
+			audioSource.Play();
 			anim.SetBool("playAnim", true);
 			anim.Play("ProjectdoorAnim");
 			anim.SetBool("playAnim", false);
+	
 			
 		}
 
