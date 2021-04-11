@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18355283, g: 0.22908884, b: 0.30557942, a: 1}
+  m_IndirectSpecularColor: {r: 0.1835523, g: 0.22908814, b: 0.30557814, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10673,10 +10673,25 @@ PrefabInstance:
       propertyPath: spawnPrefabs.Array.data[2]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8646582231512584660, guid: c579ecd3ee3d4c74c96783e007f534da,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646582231512584661, guid: c579ecd3ee3d4c74c96783e007f534da,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8646582231512584662, guid: c579ecd3ee3d4c74c96783e007f534da,
         type: 3}
       propertyPath: m_Name
       value: NetworkManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646582231512584662, guid: c579ecd3ee3d4c74c96783e007f534da,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c579ecd3ee3d4c74c96783e007f534da, type: 3}
@@ -22413,15 +22428,35 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 284413068563599338, guid: 1160edc51c0b2424792198a30425bdd4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.00006542727
+      objectReference: {fileID: 0}
+    - target: {fileID: 4026780088473161392, guid: 1160edc51c0b2424792198a30425bdd4,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4026780088473161392, guid: 1160edc51c0b2424792198a30425bdd4,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4026780088473161392, guid: 1160edc51c0b2424792198a30425bdd4,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5526168352957513444, guid: 1160edc51c0b2424792198a30425bdd4,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5526168352957513444, guid: 1160edc51c0b2424792198a30425bdd4,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5526168352957513444, guid: 1160edc51c0b2424792198a30425bdd4,
         type: 3}
@@ -22441,17 +22476,17 @@ PrefabInstance:
     - target: {fileID: 5526168353876035976, guid: 1160edc51c0b2424792198a30425bdd4,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5526168353876035976, guid: 1160edc51c0b2424792198a30425bdd4,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5526168353876035976, guid: 1160edc51c0b2424792198a30425bdd4,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: -17
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5526168354516715989, guid: 1160edc51c0b2424792198a30425bdd4,
         type: 3}
@@ -22461,7 +22496,7 @@ PrefabInstance:
     - target: {fileID: 5526168354516715989, guid: 1160edc51c0b2424792198a30425bdd4,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5526168354516715992, guid: 1160edc51c0b2424792198a30425bdd4,
         type: 3}
@@ -22601,6 +22636,16 @@ PrefabInstance:
     - target: {fileID: 5526168354655276282, guid: 1160edc51c0b2424792198a30425bdd4,
         type: 3}
       propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8135075752833358805, guid: 1160edc51c0b2424792198a30425bdd4,
+        type: 3}
+      propertyPath: sceneId
+      value: 1762124421
+      objectReference: {fileID: 0}
+    - target: {fileID: 9195561956532821686, guid: 1160edc51c0b2424792198a30425bdd4,
+        type: 3}
+      propertyPath: m_PresetInfoIsWorld
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
