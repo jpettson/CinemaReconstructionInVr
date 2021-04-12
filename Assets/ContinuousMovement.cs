@@ -43,27 +43,19 @@ public class ContinuousMovement : MonoBehaviour
         Quaternion orientation = CalculateOrientation();
         Vector3 movement = Vector3.zero;
 
-        if (movePress.GetStateUp(SteamVR_Input_Sources.LeftHand))
+        if (moveValue.axis.magnitude == 0)
         {
             speed = 0;
         }
 
-        if (movePress.GetState(SteamVR_Input_Sources.LeftHand))
-        {
-            //GetComponent<SnapTurn>().enabled = false;
-            speed += moveValue.axis.magnitude * sensitivity;
-            speed = Mathf.Clamp(speed, -maxSpeed, maxSpeed);
+        speed += moveValue.axis.magnitude * sensitivity;
+        speed = Mathf.Clamp(speed, -maxSpeed, maxSpeed);
 
-            movement += orientation * (speed * Vector3.forward);
-            //movement -= orientation * (speed * Vector3.forward);
-        }
+        movement += orientation * (speed * Vector3.forward);
 
         movement.y -= gravity * Time.deltaTime;
 
-
-
         character.Move(movement * Time.deltaTime);
-        //GetComponent<SnapTurn>().enabled = true;
     }
 
     private Quaternion CalculateOrientation() {
