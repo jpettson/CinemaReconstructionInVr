@@ -12,7 +12,7 @@ public class MovieFeedback : MonoBehaviour
 {
     public GameObject feedbackMenu;
     private Image image;
-    public Text text;
+    public GameObject text;
     private VideoPlayer videoPlayer;
     private TextMeshProUGUI title;
     private string filePath;
@@ -24,7 +24,7 @@ public class MovieFeedback : MonoBehaviour
 
     public void setText(string textfield)
     {
-        text.text = textfield;
+        text.GetComponent<TextMeshProUGUI>().text = textfield;
     }
     void Start()
     {
@@ -53,7 +53,7 @@ public class MovieFeedback : MonoBehaviour
             string path = videoPlayer.url;
             string name = Path.GetFileName(path).ToString();
             Debug.Log("TITLE: " + name);
-            text.GetComponent<Text>().text = name + " is playing!";
+            text.GetComponent<TextMeshProUGUI>().text = name + " is playing!";
             //text.text = name + "is playing!";
         }
         else
