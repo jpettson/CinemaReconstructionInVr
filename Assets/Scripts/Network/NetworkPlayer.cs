@@ -137,6 +137,6 @@ public class NetworkPlayer : NetworkBehaviour
 
         videoPlayer.Prepare();
 
-        //videoPlayer.CmdPlay();
+        videoPlayer.CmdPlay();
     }
 }
