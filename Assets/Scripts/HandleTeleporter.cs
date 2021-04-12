@@ -14,6 +14,7 @@ namespace Valve.VR.InteractionSystem.Sample
 
 		public GameObject player;
 		public GameObject projectorRoomLocation;
+		public string animationToPlay;
 
 		private AudioSource audioSource;
 		void Awake()
@@ -60,7 +61,7 @@ namespace Valve.VR.InteractionSystem.Sample
 		{
 			audioSource.Play();
 			anim.SetBool("playAnim", true);
-			anim.Play("ProjectdoorAnim");
+			anim.Play(animationToPlay);
 			anim.SetBool("playAnim", false);
 	
 			
