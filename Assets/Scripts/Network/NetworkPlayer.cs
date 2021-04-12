@@ -136,7 +136,5 @@ public class NetworkPlayer : NetworkBehaviour
         videoPlayer.url = path;
 
         videoPlayer.Prepare();
-
-        videoPlayer.CmdPlay();
     }
 }
