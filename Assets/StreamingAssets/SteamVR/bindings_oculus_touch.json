@@ -305,6 +305,18 @@
                },
                "mode" : "button",
                "path" : "/user/hand/right/input/a"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/default/in/menubutton"
+                  },
+                  "long" : {
+                     "output" : "/actions/default/in/menubutton"
+                  }
+               },
+               "mode" : "button",
+               "path" : "/user/hand/right/input/b"
             }
          ]
       },
