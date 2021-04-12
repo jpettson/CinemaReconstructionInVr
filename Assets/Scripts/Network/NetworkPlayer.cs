@@ -120,6 +120,23 @@ public class NetworkPlayer : NetworkBehaviour
         Debug.Log("memerinos");
     }
 
+    [Command]
+    void CmdPlay()
+    {
+        RpcPlay();
+    }
+
+    [ClientRpc]
+    void RpcPlay()
+    {
+        VideoPlayer videoPlayer = videoScreen.gameObject.GetComponentInChildren<VideoPlayer>();
+        
+        if (!videoPlayer.isPlaying)
+        {
+            videoPlayer.Play();
+        }
+        Debug.Log("memerinos2");
+    }
 
     [Command]
     public void CmdLoadVideo(string path)
@@ -136,5 +153,7 @@ public class NetworkPlayer : NetworkBehaviour
         videoPlayer.url = path;
 
         videoPlayer.Prepare();
+
+        CmdPlay();
     }
 }
