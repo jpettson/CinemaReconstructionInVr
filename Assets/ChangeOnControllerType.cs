@@ -19,14 +19,14 @@ public class ChangeOnControllerType : MonoBehaviour
 
         if (controllerType.Equals("rift"))
         {
-     //       riftScreen.SetActive(true);
+            riftScreen.SetActive(true);
         }
         else if (controllerType.Equals("knuckles"))
         {
      //       knucklesScreen.SetActive(true);
         } else
         {
-    //        viveScreen.SetActive(true);
+            viveScreen.SetActive(true);
         }
     }
 
