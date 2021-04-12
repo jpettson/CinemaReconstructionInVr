@@ -3393,6 +3393,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 202023146083040572, guid: bcf430b56bfa7d1419e8f7c6b5c9e13e,
+        type: 3}
+      propertyPath: snapLeftAction.actionPath
+      value: /actions/default/in/SnapTurnLeft
+      objectReference: {fileID: 0}
     - target: {fileID: 241145564364289492, guid: bcf430b56bfa7d1419e8f7c6b5c9e13e,
         type: 3}
       propertyPath: showDebugText
@@ -3482,6 +3487,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player_VR
+      objectReference: {fileID: 0}
+    - target: {fileID: 241845404380933208, guid: bcf430b56bfa7d1419e8f7c6b5c9e13e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 241845406236919356, guid: bcf430b56bfa7d1419e8f7c6b5c9e13e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3102096515572470083, guid: bcf430b56bfa7d1419e8f7c6b5c9e13e,
         type: 3}
