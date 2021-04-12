@@ -13,10 +13,13 @@ public class MovieFeedback : MonoBehaviour
     public GameObject feedbackMenu;
     private Image image;
     public Text text;
-    private VideoPlayer videoPlayer;
+
+    public VideoPlayer videoPlayer;
+  
+   
+    private long currentFrame;
     private TextMeshProUGUI title;
     private string filePath;
-    public Animator anim;
 
 
 
@@ -30,9 +33,7 @@ public class MovieFeedback : MonoBehaviour
         //   videoPlayer.targetMaterialRenderer = GetComponentInParent<MeshRenderer>();
         videoPlayer = GameObject.FindGameObjectWithTag("VideoPlayer").GetComponent<VideoPlayer>();
 
-       // image = GetComponent<Image>();
-        //text = GetComponentInChildren<Text>();
-       // text.GetComponentInChildren<Text>().text = title + "is playing!";
+      
 
     }
 
@@ -52,10 +53,14 @@ public class MovieFeedback : MonoBehaviour
 
         if (videoPlayer.isPlaying)
         {
-            anim.SetTrigger("Action");
+            Debug.Log("VIDEO IS PLAYING");
+            //anim.SetTrigger("Action");
             feedbackMenu.SetActive(true);
-            other.gameObject.GetComponentInChildren<SteamVR_LaserPointer>().enabled = true;
-           // text.GetComponent<Text>().text = title + "is playing!";
+            string path = videoPlayer.url;
+            string name = Path.GetFileName(path);
+            Debug.Log("TITLE: " + name);
+            text.GetComponent<Text>().text = name + "is playing!";
+            text.text = name + "is playing!";
         }
     }
 
@@ -71,8 +76,7 @@ public class MovieFeedback : MonoBehaviour
 
 
     void Update() {
-
         text.GetComponent<Text>().text = title + "is playing!";
-
+        text.text = title + "is playing!";
     }
 }

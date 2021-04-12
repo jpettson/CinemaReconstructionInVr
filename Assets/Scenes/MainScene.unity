@@ -567,6 +567,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06cec0f718115284d9135b852769edf7, type: 3}
+--- !u!328 &22676569 stripped
+VideoPlayer:
+  m_CorrespondingSourceObject: {fileID: 8779482756986130362, guid: 06cec0f718115284d9135b852769edf7,
+    type: 3}
+  m_PrefabInstance: {fileID: 22676568}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &26212892
 GameObject:
   m_ObjectHideFlags: 0
@@ -5264,6 +5270,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc3be917a80086a48b97933694257f09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &588367025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588367021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d82660cfbb5523419c72d0e5f3c88d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  feedbackMenu: {fileID: 4559990809692786314}
+  text: {fileID: 4559990809692786313}
+  videoPlayer: {fileID: 22676569}
 --- !u!1001 &588569241
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22651,6 +22672,24 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 1160edc51c0b2424792198a30425bdd4, type: 3}
+--- !u!114 &4559990809692786313 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5138651479450154522, guid: 1160edc51c0b2424792198a30425bdd4,
+    type: 3}
+  m_PrefabInstance: {fileID: 4559990809692786312}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &4559990809692786314 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 787545689759832201, guid: 1160edc51c0b2424792198a30425bdd4,
+    type: 3}
+  m_PrefabInstance: {fileID: 4559990809692786312}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8356626667102373725 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5526168354516715989, guid: 1160edc51c0b2424792198a30425bdd4,

@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 3866364578012620724}
   - component: {fileID: 1601255117143370986}
   - component: {fileID: 7059032527421101795}
-  - component: {fileID: 6173514065014591868}
   m_Layer: 5
   m_Name: FeedbackMenu
   m_TagString: Untagged
@@ -155,20 +154,6 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
---- !u!114 &6173514065014591868
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 787545689759832201}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d82660cfbb5523419c72d0e5f3c88d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  feedbackMenu: {fileID: 787545689759832201}
-  text: {fileID: 5138651479450154522}
 --- !u!1 &3288453001793253562
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,6 +245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   feedbackMenu: {fileID: 0}
   text: {fileID: 0}
+  videoPlayer: {fileID: 0}
 --- !u!1 &5526168352957513443
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,7 +355,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.021945499, y: -0.0005144067}
+  m_AnchoredPosition: {x: -0.021945499, y: 0.0018659644}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &5526168353487502478
@@ -621,7 +607,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 5526168352957513444}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.9999953
+  m_Size: 0.9999957
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -712,7 +698,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &5526168354516715991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -936,6 +922,7 @@ GameObject:
   - component: {fileID: 280103859073732922}
   - component: {fileID: 4713773443402579951}
   - component: {fileID: 5138651479450154522}
+  - component: {fileID: 3995263729573251355}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -1004,3 +991,19 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Movie is playing
+--- !u!114 &3995263729573251355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7070060452249272426}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d82660cfbb5523419c72d0e5f3c88d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  feedbackMenu: {fileID: 787545689759832201}
+  text: {fileID: 5138651479450154522}
+  videoPlayer: {fileID: 7058152090021369082, guid: aa90ba7e00b5cf040b16a09ec31e4dc0,
+    type: 3}
