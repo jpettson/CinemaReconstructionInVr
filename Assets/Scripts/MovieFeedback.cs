@@ -16,6 +16,8 @@ public class MovieFeedback : MonoBehaviour
     private VideoPlayer videoPlayer;
     private TextMeshProUGUI title;
     private string filePath;
+    public Animator anim;
+
 
 
     public void setText(string textfield)
@@ -50,9 +52,10 @@ public class MovieFeedback : MonoBehaviour
 
         if (videoPlayer.isPlaying)
         {
+            anim.SetTrigger("Action");
             feedbackMenu.SetActive(true);
             other.gameObject.GetComponentInChildren<SteamVR_LaserPointer>().enabled = true;
-            text.GetComponentInChildren<Text>().text = title + "is playing!";
+           // text.GetComponent<Text>().text = title + "is playing!";
         }
     }
 
@@ -64,5 +67,12 @@ public class MovieFeedback : MonoBehaviour
             feedbackMenu.SetActive(false);
             other.gameObject.GetComponentInChildren<SteamVR_LaserPointer>().enabled = false;
         }
+    }
+
+
+    void Update() {
+
+        text.GetComponent<Text>().text = title + "is playing!";
+
     }
 }
