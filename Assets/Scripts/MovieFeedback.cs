@@ -52,6 +52,7 @@ public class MovieFeedback : MonoBehaviour
             feedbackMenu.SetActive(true);
             string path = videoPlayer.url;
             string name = Path.GetFileName(path).ToString();
+            TrimName(name);
             Debug.Log("TITLE: " + name);
             text.GetComponent<TextMeshProUGUI>().text = name + " is playing!";
             //text.text = name + "is playing!";
@@ -61,6 +62,15 @@ public class MovieFeedback : MonoBehaviour
             feedbackMenu.SetActive(false);
         }
 
+    }
+
+    public void TrimName(string filename)
+    {
+        string meta = ".mp4";
+        if (filename.EndsWith(meta))
+        {
+           filename= filename.Replace(meta, "");
+        }
     }
 
 
