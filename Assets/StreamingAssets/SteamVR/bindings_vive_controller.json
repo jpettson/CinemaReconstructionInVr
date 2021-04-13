@@ -207,9 +207,6 @@
                "inputs" : {
                   "click" : {
                      "output" : "/actions/default/in/menubutton"
-                  },
-                  "long" : {
-                     "output" : "/actions/default/in/menubutton"
                   }
                },
                "mode" : "button",
@@ -340,7 +337,7 @@
    "category" : "steamvr_input",
    "controller_type" : "vive_controller",
    "description" : "",
-   "name" : "Saved Cinema Reconstruction in VR [Testing] configuration for Vive Controller",
+   "name" : "Saved [Testing] Cinema Reconstruction in VR configuration for Vive Controller",
    "options" : {},
    "simulated_actions" : []
 }

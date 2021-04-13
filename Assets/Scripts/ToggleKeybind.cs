@@ -10,13 +10,23 @@ public class ToggleKeybind : MonoBehaviour
 
     public GameObject keybindScreen;
 
+    private float delay = 30f;
+    private float currentDelay = 0;
 
     // Update is called once per frame
     void Update()
     {
         if (menuPress.GetStateUp(SteamVR_Input_Sources.RightHand))
         {
-            keybindScreen.SetActive(!keybindScreen.activeSelf);
+            if (currentDelay == 0)
+            {
+                keybindScreen.SetActive(!keybindScreen.activeSelf);
+                currentDelay = delay;
+            } else
+            {
+                currentDelay -= Time.deltaTime;
+            }
+            
         } 
     }
 }

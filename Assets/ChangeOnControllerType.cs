@@ -15,7 +15,7 @@ public class ChangeOnControllerType : MonoBehaviour
     void Start()
     {
         Debug.Log(SteamVR.instance.hmd_Type);
-
+        controllerType = SteamVR.instance.hmd_Type;
 
         if (controllerType.Equals("rift"))
         {
