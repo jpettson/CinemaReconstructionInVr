@@ -6,6 +6,7 @@ using Valve.VR.Extras;
 using TMPro;
 using Mirror;
 using System.IO;
+using System.Text.RegularExpressions
 using UnityEngine.UI;
 
 public class MovieFeedback : MonoBehaviour
@@ -17,6 +18,8 @@ public class MovieFeedback : MonoBehaviour
     private TextMeshProUGUI title;
     private string filePath;
     //public Animator anim;
+    private List<string> fileNames;
+
 
     private bool inside = false;
 
@@ -51,8 +54,8 @@ public class MovieFeedback : MonoBehaviour
             //anim.SetTrigger("Action");
             feedbackMenu.SetActive(true);
             string path = videoPlayer.url;
-            string name = Path.GetFileName(path).ToString();
-            TrimName(name);
+            string name = Regex.Replace(Path.GetFileName(path).ToString(), ".mp4", "").Trim();
+      
             Debug.Log("TITLE: " + name);
             text.GetComponent<TextMeshProUGUI>().text = name + " is playing!";
             //text.text = name + "is playing!";
@@ -64,14 +67,16 @@ public class MovieFeedback : MonoBehaviour
 
     }
 
-    public void TrimName(string filename)
+    /*public void TrimName(string filename)
     {
+
         string meta = ".mp4";
         if (filename.EndsWith(meta))
         {
            filename= filename.Replace(meta, "");
+        
         }
-    }
+    }*/
 
 
     /*  public void Initiate(string filePath)
