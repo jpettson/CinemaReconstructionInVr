@@ -6,7 +6,7 @@ using Valve.VR.Extras;
 using TMPro;
 using Mirror;
 using System.IO;
-using System.Text.RegularExpressions
+using System.Text.RegularExpressions;
 using UnityEngine.UI;
 
 public class MovieFeedback : MonoBehaviour
