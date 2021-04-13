@@ -18,6 +18,14 @@ public class TeleportToLocation : MonoBehaviour
 
     bool hastped = false;
 
+    public GameObject handle;
+
+    private Color originalcolor;
+
+    private void Start()
+    {
+        originalcolor = handle.GetComponent<Renderer>().material.color;
+    }
     void Update() {
         state = SteamVR_Input.GetState("X_Button_Press", SteamVR_Input_Sources.LeftHand);
         if (state && isInside) {
@@ -28,12 +36,14 @@ public class TeleportToLocation : MonoBehaviour
     public void OnTriggerEnter(){
         
         isInside = true;
-        
-     }
+        handle.GetComponent<Renderer>().material.color = new Color32(0,255,40,51);
+
+    }
 
     public void OnTriggerExit() {
          isInside = false;
+         handle.GetComponent<Renderer>().material.color = originalcolor;
 
 
-    }
-}
+     }
+ }
