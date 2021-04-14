@@ -52,7 +52,7 @@ VideoPlayer:
   m_AspectRatio: 2
   m_DataSource: 0
   m_PlaybackSpeed: 1
-  m_AudioOutputMode: 2
+  m_AudioOutputMode: 1
   m_TargetAudioSources:
   - {fileID: 0}
   m_DirectAudioVolumes:
@@ -66,6 +66,7 @@ VideoPlayer:
   m_Looping: 0
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
 --- !u!114 &56807911983154789
 MonoBehaviour:
   m_ObjectHideFlags: 0
