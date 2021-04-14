@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
-using Valve.VR.InteractionSystem;
 
 
 
@@ -40,33 +39,28 @@ public class ContinuousMovement : MonoBehaviour
 
     void CalculateMovement()
     {
-        Quaternion orientation = CalculateOrientation();
+        Vector3 orientationEuler = new Vector3(0, head.rotation.eulerAngles.y, 0);
+        Quaternion orientation = Quaternion.Euler(orientationEuler);
         Vector3 movement = Vector3.zero;
 
-        if (moveValue.axis.magnitude == 0)
+        if (movePress.GetStateUp(SteamVR_Input_Sources.LeftHand))
         {
             speed = 0;
         }
 
-        speed += moveValue.axis.magnitude * sensitivity;
-        speed = Mathf.Clamp(speed, -maxSpeed, maxSpeed);
+        if (movePress.GetState(SteamVR_Input_Sources.LeftHand))
+        {
+            speed += moveValue.axis.y * sensitivity;
+            speed = Mathf.Clamp(speed, -maxSpeed, maxSpeed);
 
-        movement += orientation * (speed * Vector3.forward);
+            movement += orientation * (speed * Vector3.forward);
+        }
 
         movement.y -= gravity * Time.deltaTime;
 
+
+
         character.Move(movement * Time.deltaTime);
-    }
-
-    private Quaternion CalculateOrientation() {
-
-        float rotation = Mathf.Atan2(moveValue.axis.x, moveValue.axis.y);
-        rotation *= Mathf.Rad2Deg;
-
-        Vector3 orientationEuler = new Vector3(0, head.rotation.eulerAngles.y + rotation, 0);
-        return Quaternion.Euler(orientationEuler);
-
-
     }
 
 
