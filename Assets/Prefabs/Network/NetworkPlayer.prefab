@@ -166,7 +166,7 @@ MonoBehaviour:
   leftHand: {fileID: 5562795004135315108}
   rightHand: {fileID: 5889518751390410661}
   pauseButton:
-    actionPath: /actions/default/in/GrabGrip
+    actionPath: /actions/default/in/X_Button_Press
     needsReinit: 0
 --- !u!114 &1118783297025805248
 MonoBehaviour:

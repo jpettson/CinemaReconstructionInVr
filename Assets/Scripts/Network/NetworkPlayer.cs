@@ -17,7 +17,7 @@ public class NetworkPlayer : NetworkBehaviour
     [SerializeField]
     public Transform rightHand;
 
-    public SteamVR_Action_Boolean pauseButton = SteamVR_Input.GetBooleanAction("PauseButton");
+    public SteamVR_Action_Boolean pauseButton = SteamVR_Input.GetBooleanAction("X_Button_Press");
     private VideoScreen videoScreen;
     private Player p;
     private bool isVideoPlaying = false;
