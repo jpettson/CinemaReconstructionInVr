@@ -170,7 +170,7 @@
             {
                "inputs" : {
                   "click" : {
-                     "output" : "/actions/default/in/pausebutton"
+                     "output" : "/actions/default/in/x_button_press"
                   }
                },
                "mode" : "trigger",
@@ -275,7 +275,7 @@
             {
                "inputs" : {
                   "click" : {
-                     "output" : "/actions/default/in/pausebutton"
+                     "output" : "/actions/default/in/x_button_press"
                   }
                },
                "mode" : "button",
@@ -304,6 +304,15 @@
                },
                "mode" : "button",
                "path" : "/user/hand/left/input/system"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/default/in/pausebutton"
+                  }
+               },
+               "mode" : "button",
+               "path" : "/user/hand/left/input/x"
             }
          ]
       },
