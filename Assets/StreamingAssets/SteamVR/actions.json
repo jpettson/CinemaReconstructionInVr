@@ -104,7 +104,7 @@
   "action_sets": [
     {
       "name": "/actions/default",
-      "usage": "single"
+      "usage": "leftright"
     },
     {
       "name": "/actions/platformer",
@@ -190,7 +190,8 @@
       "/actions/default/in/SnapTurnRight": "Snap Turn (Right)",
       "/actions/default/in/TouchpadPosition": "Touchpad Position",
       "/actions/default/in/MenuButton": "Menu button",
-      "/actions/default/in/X_Button_Press": "X_Button_Press"
+      "/actions/default/in/X_Button_Press": "X_Button_Press",
+      "/actions/default/in/PauseButton": "Pause Button"
     }
   ]
 }
