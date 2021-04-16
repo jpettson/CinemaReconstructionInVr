@@ -108,6 +108,7 @@ GameObject:
   - component: {fileID: 5142853987833845369}
   - component: {fileID: 767059495821271551}
   - component: {fileID: 8438121582759431187}
+  - component: {fileID: 7053381147900315852}
   m_Layer: 0
   m_Name: NetworkPlayer
   m_TagString: Untagged
@@ -243,6 +244,31 @@ MonoBehaviour:
   localRotationSensitivity: 0.01
   localScaleSensitivity: 0.01
   target: {fileID: 5889518751390410661}
+--- !u!114 &7053381147900315852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885418013691192537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3c7cc8f705c81f4f90f5644a8924afe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  videoPlayer: {fileID: 0}
+  walkwaylights: []
+  projectorlights: []
+  frontlights: []
+  ceilinglights: []
+  misclights: []
+  intensitySpeed: 0.5
+  frontIntensity: 2
+  walkwayIntensity: 2
+  ceilingIntensity: 3
+  miscIntensity: 0.5
 --- !u!1001 &1469048668323645074
 PrefabInstance:
   m_ObjectHideFlags: 0
