@@ -1472,14 +1472,12 @@ GameObject:
   - component: {fileID: 241145564374339576}
   - component: {fileID: 241145564364386036}
   - component: {fileID: 178401195006475224}
-  - component: {fileID: 8414795393583757856}
-  - component: {fileID: 7814751844970171990}
   - component: {fileID: 3102096515572470083}
   - component: {fileID: 109132961843798729}
   - component: {fileID: 7590369488368308427}
   - component: {fileID: 6834101670947773703}
   m_Layer: 0
-  m_Name: Player_VR
+  m_Name: Player_VR 1
   m_TagString: Player
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1547,37 +1545,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laserPointer: {fileID: 729353571683032750}
---- !u!114 &8414795393583757856
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 241145564374695808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneId: 0
-  serverOnly: 0
-  m_AssetId: 
-  hasSpawned: 0
---- !u!114 &7814751844970171990
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 241145564374695808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9df47cde6bbbc0f46af47fdc622c9e0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  videoPlayer: {fileID: 0}
 --- !u!143 &3102096515572470083
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1636,7 +1603,6 @@ MonoBehaviour:
     actionPath: /actions/default/in/MenuButton
     needsReinit: 0
   teleport: {fileID: 0}
-  teleportPoints: {fileID: 0}
 --- !u!114 &6834101670947773703
 MonoBehaviour:
   m_ObjectHideFlags: 0
