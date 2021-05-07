@@ -82,7 +82,7 @@ public class NetworkPlayer : NetworkBehaviour
         if (e.target.CompareTag("MovieListItem"))
         {
             
-            CmdLoadVideo(Application.streamingAssetsPath + "/" + Path.GetFileName(e.target.gameObject.GetComponent<MovieListItem>().GetFilePath()));
+            CmdLoadVideo(Path.GetFileName(e.target.gameObject.GetComponent<MovieListItem>().GetFilePath()));
             
         } 
     }
@@ -150,7 +150,7 @@ public class NetworkPlayer : NetworkBehaviour
         //  InitializeVideoPlayer();
 
         VideoPlayer videoPlayer = videoScreen.gameObject.GetComponentInChildren<VideoPlayer>();
-        videoPlayer.url = path;
+        videoPlayer.url = Application.streamingAssetsPath + "/" + path;
 
         videoPlayer.Prepare();
 
