@@ -2800,7 +2800,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a58df18ce8f1d5146b0492b4ce99fec0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 576286367}
   projectorRoomLocation: {fileID: 782600359}
   animationToPlay: ToEntrencedoorHandleAnim
 --- !u!1001 &246016532
@@ -6235,6 +6235,12 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &576286367 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 241145564374695808, guid: bcf430b56bfa7d1419e8f7c6b5c9e13e,
+    type: 3}
+  m_PrefabInstance: {fileID: 2029385045}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &588367020
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13356,6 +13362,12 @@ Transform:
   m_Father: {fileID: 2057570184}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1291152169 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2181251294386210498, guid: e6efcdd42d9305441be53880cf2d6ab3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1166533968}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1304373799
 GameObject:
   m_ObjectHideFlags: 0
@@ -17111,7 +17123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a58df18ce8f1d5146b0492b4ce99fec0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 576286367}
   projectorRoomLocation: {fileID: 507588263}
   animationToPlay: ProjectdoorAnim
 --- !u!64 &1592887928
@@ -29028,6 +29040,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player_VR 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7590369488368308427, guid: bcf430b56bfa7d1419e8f7c6b5c9e13e,
+        type: 3}
+      propertyPath: teleport
+      value: 
+      objectReference: {fileID: 1291152169}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcf430b56bfa7d1419e8f7c6b5c9e13e, type: 3}
 --- !u!1 &2030812691

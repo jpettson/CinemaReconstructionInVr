@@ -53,7 +53,7 @@ public class FileExplorerUI : MonoBehaviour
             foreach (string file in correctFiles)
             {
                 GameObject g = Instantiate(listItem, scrollView);
-                g.GetComponent<MovieListItem>().Initiate("StreamingAssets/" + Path.GetFileName(file));
+                g.GetComponent<MovieListItem>().Initiate(Path.GetFileName(file));
             }
 
             
