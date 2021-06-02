@@ -2,7 +2,7 @@
 
 We've created a reconstruction of the movie theater 'Flamman' in Virtual Reality. 
 
-To download only the executable, see [releases](https://github.com/jpettson/CinemaReconstructionInVR/releases/latest).
+To download only the executable, see [releases](https://github.com/jpettson/CinemaReconstructionInVR/releases).
 
 ## Repository structure
 
